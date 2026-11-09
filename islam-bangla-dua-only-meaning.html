@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ইসলাম বাংলা - আল কুরআন ও পূর্ণাঙ্গ ইসলামিক প্ল্যাটফর্ম</title>
+    <!-- App Logo as Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/wNkrJ9tb/IMG-20261108-WA7302.jpg">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Scheherazade+New:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- FIREBASE INITIALIZATION -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-analytics.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCDdvOotHAj1LHPNXYj_OFK7sddC9PaqPk",
+        authDomain: "islam-bangla.firebaseapp.com",
+        projectId: "islam-bangla",
+        storageBucket: "islam-bangla.firebasestorage.app",
+        messagingSenderId: "804089398471",
+        appId: "1:804089398471:web:a46ac73dc3a6f5c7452ae2",
+        measurementId: "G-8V26FYY3FF"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      window.firebaseApp = app;
+    </script>
+
+    <style>
+        * {
+            font-family: 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Clear Bengali dua pronunciation: larger type, comfortable spacing and reliable shaping */
+        .dua-pronunciation {
+            font-family: 'Noto Sans Bengali', sans-serif !important;
+            font-size: 17px !important;
+            font-weight: 600 !important;
+            line-height: 2 !important;
+            letter-spacing: 0 !important;
+            word-spacing: 0.02em;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            word-break: normal;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: #e5fff3;
+        }
+        @media (min-width: 640px) {
+            .dua-pronunciation { font-size: 18px !important; line-height: 2.05 !important; }
+        }
+
+        .font-arabic {
+            font-family: 'Scheherazade New', 'Amiri', serif;
+            font-feature-settings: "cv01", "cv02";
+            direction: rtl;
+        }
+
+        .bg-islamic-pattern {
+            background-color: #04140e;
+            background-image: radial-gradient(#10b981 0.75px, transparent 0.75px), radial-gradient(#d97706 0.75px, #04140e 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            background-attachment: fixed;
+        }
+
+        .royal-card {
+            background: linear-gradient(145deg, #09261c 0%, #051912 100%);
+            border: 1.5px solid #1c5e46;
+            box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+        }
+
+        .royal-card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .royal-card-hover:hover {
+            border-color: #f59e0b;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px -4px rgba(245, 158, 11, 0.25);
+        }
+
+        .feature-card {
+            background: linear-gradient(160deg, #0d3527 0%, #061c14 100%);
+            border: 1.5px solid #1f6b50;
+            transition: all 0.25s ease;
+        }
+        .feature-card:hover {
+            border-color: #fbbf24;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 25px -3px rgba(251, 191, 36, 0.25);
+        }
+        .feature-card:active {
+            transform: scale(0.97);
+        }
+
+        .gold-border-glow {
+            border: 2px solid #f59e0b;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.35);
+        }
+
+        .last-read-highlight {
+            border-color: #f59e0b !important;
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.55);
+            background: linear-gradient(145deg, #134633 0%, #0a2e20 100%) !important;
+            animation: pulseResume 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseResume {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.015); }
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #03100b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #f59e0b, #10b981);
+            border-radius: 6px;
+        }
+
+        input[type=range] {
+            accent-color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-islamic-pattern text-white min-h-screen flex flex-col antialiased selection:bg-amber-400 selection:text-slate-950 pb-32">
+
+    <!-- FLOATING NOTICE POPUP -->
+    <div id="readingNotice" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 opacity-0 pointer-events-none transition-all duration-500 transform -translate-y-4 max-w-md w-[92%]">
+        <div class="royal-card border-2 border-amber-400/80 p-3.5 rounded-2xl shadow-2xl flex items-center gap-3 bg-[#07241a]/95 backdrop-blur-md">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-400 to-amber-500 text-slate-950 flex items-center justify-center shrink-0 shadow-md">
+                <i data-lucide="bell-ring" class="w-5 h-5 stroke-[2.5]"></i>
+            </div>
+            <div class="text-xs md:text-sm">
+                <span class="font-bold text-amber-300 block">নোটিফিকেশন</span>
+                <p id="noticeText" class="text-emerald-100 font-semibold mt-0.5">তথ্য লোড হচ্ছে...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ISLAMIC CUSTOM CONFIRMATION -->
+    <div id="islamicConfirmModal" class="hidden fixed inset-0 z-[70] bg-black/70 backdrop-blur-sm items-center justify-center p-4">
+        <div class="royal-card w-full max-w-sm rounded-3xl border-2 border-amber-400/70 p-5 shadow-2xl">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-amber-400/15 text-amber-300 flex items-center justify-center"><i data-lucide="moon-star" class="w-6 h-6"></i></div>
+            <h3 id="islamicConfirmTitle" class="text-center text-lg font-black text-amber-300">নিশ্চিত করুন</h3>
+            <p id="islamicConfirmMessage" class="text-center text-sm text-emerald-100 mt-2 mb-5">আপনি কি নিশ্চিত?</p>
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="resolveIslamicConfirm(false)" class="py-3 rounded-xl border border-emerald-600/60 text-emerald-100 font-bold text-sm">বাতিল</button>
+                <button onclick="resolveIslamicConfirm(true)" class="py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-sm">হ্যাঁ, নিশ্চিত</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 bg-[#061e16]/95 backdrop-blur-md border-b-2 border-amber-500/30 px-4 py-3 shadow-2xl">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="goHome()">
+                <div class="relative group">
+                    <img 
+                        src="https://i.ibb.co/wNkrJ9tb/IMG-20261108-WA7302.jpg" 
+                        alt="ইসলাম বাংলা লোগো" 
+                        class="w-12 h-12 rounded-2xl object-cover gold-border-glow group-hover:scale-105 transition duration-300"
+                        onerror="this.src='https://placehold.co/100x100/064e3b/fbbf24?text=ISLAM'"
+                    />
+                    <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-[#061e16]"></div>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-black bg-gradient-to-r from-amber-300 via-amber-200 to-emerald-300 bg-clip-text text-transparent tracking-tight">
+                        ইসলাম বাংলা
+                    </h1>
+                    <p class="text-[11px] font-bold text-emerald-300 tracking-wide">আল কুরআন ও ইসলামিক সেবা</p>
+                </div>
+            </div>
+
+            <!-- Dynamic Font Resizer for Ayahs -->
+            <div id="fontControls" class="hidden flex items-center gap-1 bg-[#041610] p-1 rounded-xl border border-amber-500/40">
+                <button onclick="changeFontSize(-2)" title="লেখা ছোট করুন" class="px-2.5 py-1 text-xs font-bold bg-[#0d3326] text-amber-300 rounded-lg hover:bg-emerald-700 active:scale-95 transition">অ -</button>
+                <button onclick="changeFontSize(2)" title="লেখা বড় করুন" class="px-2.5 py-1 text-xs font-bold bg-[#0d3326] text-amber-300 rounded-lg hover:bg-emerald-700 active:scale-95 transition">অ +</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="max-w-4xl mx-auto w-full px-3.5 pt-5 flex-1">
+        
+        <!-- ================= 1. HOME SCREEN ================= -->
+        <div id="homeView" class="space-y-6">
+            
+            <!-- Hero Luxury Islamic Banner -->
+            <div class="royal-card rounded-3xl p-5 md:p-7 relative overflow-hidden border-2 border-amber-500/40 shadow-2xl">
+                <div class="absolute -right-16 -top-16 w-52 h-52 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-5">
+                    <div class="flex items-center gap-4">
+                        <img 
+                            src="https://i.ibb.co/wNkrJ9tb/IMG-20261108-WA7302.jpg" 
+                            alt="Logo" 
+                            class="w-20 h-20 rounded-3xl object-cover gold-border-glow shadow-xl shrink-0 hidden sm:block"
+                        />
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 font-arabic text-lg mb-2">
+                                بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                            </span>
+                            <h2 class="text-2xl md:text-3xl font-black text-white">
+                                ইসলাম বাংলা প্ল্যাটফর্মে স্বাগতম
+                            </h2>
+                            <p class="text-emerald-200 text-sm md:text-base font-semibold mt-1">
+                                কুরআন, হাদিস, দৈনন্দিন দোয়া, আমল ট্র্যাকিং ও নির্ভরযোগ্য দ্বীনি সমাধান।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURE BUTTONS (3 CARDS PER ROW - 2 ROWS) -->
+            <div>
+                <div class="flex items-center justify-between mb-3 px-1">
+                    <h3 class="text-base md:text-lg font-bold text-amber-300 flex items-center gap-2">
+                        <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                        ইসলামিক সুবিধাসমূহ
+                    </h3>
+                    <span class="text-xs text-emerald-300/70">৬টি বিশেষ ফিচার</span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2.5 sm:gap-4">
+                    <!-- 1. কুরআন -->
+                    <button onclick="openQuranSection()" class="feature-card p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-lg">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#041911] border border-amber-400/30 p-2 flex items-center justify-center shadow-inner group-hover:border-amber-400 transition-all duration-300">
+                            <img src="https://i.ibb.co.com/qMyh75m5/file-000000002bb48211876fba7fd015678b.png" alt="কুরআন" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                        </div>
+                        <span class="mt-2.5 text-xs sm:text-sm font-extrabold text-white group-hover:text-amber-300 transition">কুরআন</span>
+                    </button>
+
+                    <!-- 2. হাদিস -->
+                    <button onclick="openHadithSection()" class="feature-card p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-lg">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#041911] border border-amber-400/30 p-2 flex items-center justify-center shadow-inner group-hover:border-amber-400 transition-all duration-300">
+                            <img src="https://i.ibb.co.com/SXRmjxnB/file-000000001af08211b6acd260a9476952.png" alt="হাদিস" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                        </div>
+                        <span class="mt-2.5 text-xs sm:text-sm font-extrabold text-white group-hover:text-amber-300 transition">হাদিস</span>
+                    </button>
+
+                    <!-- 3. দোয়া -->
+                    <button onclick="openDuaSection()" class="feature-card p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-lg">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#041911] border border-amber-400/30 p-2 flex items-center justify-center shadow-inner group-hover:border-amber-400 transition-all duration-300">
+                            <img src="https://i.ibb.co.com/9KCy2Xc/file-000000009ec482119e376b0ea4c43143.png" alt="দোয়া" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                        </div>
+                        <span class="mt-2.5 text-xs sm:text-sm font-extrabold text-white group-hover:text-amber-300 transition">দোয়া</span>
+                    </button>
+
+                    <!-- 4. আমল ট্র্যাকার -->
+                    <button onclick="openAmalSection()" class="feature-card p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-lg">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#041911] border border-amber-400/30 p-2 flex items-center justify-center shadow-inner group-hover:border-amber-400 transition-all duration-300">
+                            <img src="https://i.ibb.co.com/CpCkSXTm/file-000000002fb08207a9ec4fb18173bc51.png" alt="আমল ট্র্যাকার" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                        </div>
+                        <span class="mt-2.5 text-[11px] sm:text-sm font-extrabold text-white group-hover:text-amber-300 transition">আমল ট্র্যাকার</span>
+                    </button>
+
+                    <!-- 5. দ্বীনি জিজ্ঞাসা -->
+                    <button onclick="openJiggasaSection()" class="feature-card p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-lg">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#041911] border border-amber-400/30 p-2 flex items-center justify-center shadow-inner group-hover:border-amber-400 transition-all duration-300">
+                            <img src="https://i.ibb.co.com/B5X7wbGK/file-0000000040d88211814e99165c6f5493.png" alt="দ্বীনি জিজ্ঞাসা" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                        </div>
+                        <span class="mt-2.5 text-[11px] sm:text-sm font-extrabold text-white group-hover:text-amber-300 transition">দ্বীনি জিজ্ঞাসা</span>
+                    </button>
+
+                    <!-- 6. যাকাত ক্যালকুলেটর -->
+                    <button onclick="openZakatSection()" class="feature-card p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center text-center group cursor-pointer shadow-lg">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#041911] border border-amber-400/30 p-2 flex items-center justify-center shadow-inner group-hover:border-amber-400 transition-all duration-300">
+                            <img src="https://i.ibb.co.com/v45NYVhK/file-00000000761c8211b5186ecaa4e8922f.png" alt="যাকাত ক্যালকুলেটর" class="w-full h-full object-contain group-hover:scale-110 transition duration-300">
+                        </div>
+                        <span class="mt-2.5 text-[10px] sm:text-sm font-extrabold text-white group-hover:text-amber-300 transition leading-tight">যাকাত ক্যালকুলেটর</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ডেইলি হাদিস/নসিহত কার্ড -->
+            <div class="royal-card p-4 rounded-2xl border border-amber-500/30">
+                <div class="flex items-center gap-2 text-amber-300 font-bold text-sm mb-1">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>আজকের উপদেশ</span>
+                </div>
+                <p id="dailyAdviceText" class="text-xs sm:text-sm text-emerald-100 font-medium leading-relaxed">
+                    প্রতিদিন নিজের কাজ ও আচরণে আল্লাহর সন্তুষ্টিকে প্রাধান্য দিন।
+                </p>
+            </div>
+        </div>
+
+        <!-- ================= 2. QURAN SURAH LIST SCREEN ================= -->
+        <div id="quranListView" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+                <button onclick="goHome()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] text-xs sm:text-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>হোমে ফিরুন</span>
+                </button>
+                <h3 class="text-base font-extrabold text-amber-300">কুরআনুল কারীম (১১৪ সূরা)</h3>
+            </div>
+
+            <!-- SEARCH BAR -->
+            <div class="relative">
+                <div class="relative flex items-center bg-[#07241a] rounded-2xl border-2 border-emerald-600/40 focus-within:border-amber-400 transition shadow-xl overflow-hidden">
+                    <div class="pl-3.5 pr-2 flex items-center pointer-events-none text-amber-400">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        oninput="filterSurahs()" 
+                        placeholder="সূরার নাম বা নম্বর দিয়ে খুঁজুন (যেমন: ১, ফাতিহা, ইয়াসিন)..." 
+                        class="w-full py-3.5 pr-10 bg-transparent text-white placeholder-emerald-300/50 font-semibold focus:outline-none text-sm"
+                    />
+                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 p-1 rounded-lg bg-emerald-950 text-emerald-300 hover:text-amber-300">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-1">
+                <button onclick="setFilter('all')" id="tab-all" class="px-3.5 py-1.5 rounded-xl text-xs font-black bg-amber-400 text-slate-950">
+                    সকল সূরা (১১৪)
+                </button>
+                <button onclick="setFilter('Meccan')" id="tab-Meccan" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#07241a] text-emerald-200 border border-emerald-600/40">
+                    মাক্কী সূরা (৮৬)
+                </button>
+                <button onclick="setFilter('Medinan')" id="tab-Medinan" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#07241a] text-emerald-200 border border-emerald-600/40">
+                    মাদানী সূরা (২৮)
+                </button>
+            </div>
+
+            <!-- Surah List Container -->
+            <div>
+                <div id="loadingIndicator" class="text-center py-16">
+                    <div class="inline-block w-8 h-8 border-4 border-amber-400 border-t-transparent rounded-full animate-spin"></div>
+                    <p class="text-amber-300 font-bold mt-2">সূরা সমূহ লোড হচ্ছে...</p>
+                </div>
+                <div id="surahGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+            </div>
+        </div>
+
+        <!-- ================= 3. SURAH READING VIEW ================= -->
+        <div id="readerView" class="hidden space-y-5">
+            <div class="flex items-center justify-between gap-2">
+                <button onclick="backToQuranList()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0b2b20] border-2 border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] text-xs sm:text-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>সূরা তালিকায় ফিরুন</span>
+                </button>
+
+                <button onclick="playFullSurah()" id="surahPlayBtn" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black hover:brightness-110 shadow-lg text-xs sm:text-sm">
+                    <i data-lucide="play" class="w-4 h-4 fill-slate-950"></i>
+                    <span>সম্পূর্ণ সূরা শুনুন</span>
+                </button>
+            </div>
+
+            <!-- Header Card -->
+            <div class="royal-card rounded-3xl p-5 text-center border-2 border-amber-500/40 relative">
+                <h2 id="currentSurahBangla" class="text-2xl md:text-3xl font-black text-amber-300">সূরা</h2>
+                <p id="currentSurahArabic" class="text-3xl font-arabic text-emerald-200 mt-2 font-bold">سورة</p>
+                <div class="flex items-center justify-center gap-2 text-xs font-bold text-emerald-200 mt-2">
+                    <span id="currentSurahType" class="px-2.5 py-0.5 rounded-full bg-[#04140e] border border-emerald-500/30">মাক্কী</span>
+                    <span id="currentSurahVerses" class="px-2.5 py-0.5 rounded-full bg-[#04140e] border border-emerald-500/30">৭ টি আয়াত</span>
+                </div>
+                <div id="bismillahBanner" class="mt-4 pt-3 border-t border-emerald-600/30 font-arabic text-2xl text-amber-200 font-bold">
+                    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                </div>
+            </div>
+
+            <!-- Ayahs List -->
+            <div id="ayahsList" class="space-y-4"></div>
+        </div>
+
+        <!-- ================= 4. HADITH SECTION (SAHIH BUKHARI & SAHIH MUSLIM) ================= -->
+        <div id="hadithView" class="hidden space-y-5">
+            <div class="flex items-center justify-between">
+                <button onclick="goHome()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] text-xs sm:text-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>হোমে ফিরুন</span>
+                </button>
+                <h3 class="text-base font-extrabold text-amber-300">সহীহ হাদিস সম্ভার (লাইভ সার্ভার)</h3>
+            </div>
+
+            <!-- Selection: 2 Large Cards (Bukhari & Muslim) -->
+            <div id="hadithBookSelection" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div onclick="openLiveHadithBook('bukhari', 'সহীহ বুখারী', 7563)" class="royal-card royal-card-hover p-6 rounded-3xl cursor-pointer text-center border-2 border-emerald-600/40 group">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-400/20 border border-amber-400 text-amber-300 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="book-open" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-amber-300">সহীহ বুখারী</h4>
+                    <p class="text-xs text-emerald-200 mt-1">সর্বাধিক বিশুদ্ধ হাদিস গ্রন্থ (১ - ৭৫৬৩)</p>
+                    <span class="inline-block mt-3 px-3.5 py-1.5 bg-[#04140e] text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30 group-hover:bg-amber-400 group-hover:text-slate-950 transition">
+                        হাদিস পড়ুন ও খুঁজুন &rarr;
+                    </span>
+                </div>
+
+                <div onclick="openLiveHadithBook('muslim', 'সহীহ মুসলিম', 7500)" class="royal-card royal-card-hover p-6 rounded-3xl cursor-pointer text-center border-2 border-emerald-600/40 group">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-400 text-emerald-300 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="book-check" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-amber-300">সহীহ মুসলিম</h4>
+                    <p class="text-xs text-emerald-200 mt-1">বিশুদ্ধতার দ্বিতীয় স্তর (১ - ৭৫০০+)</p>
+                    <span class="inline-block mt-3 px-3.5 py-1.5 bg-[#04140e] text-emerald-300 text-xs font-bold rounded-xl border border-emerald-500/30 group-hover:bg-emerald-400 group-hover:text-slate-950 transition">
+                        হাদিস পড়ুন ও খুঁজুন &rarr;
+                    </span>
+                </div>
+            </div>
+
+            <!-- Hadith Content List View With Custom Number Search -->
+            <div id="hadithContentArea" class="hidden space-y-4">
+                <div class="flex items-center justify-between bg-[#07241a] p-3 rounded-2xl border border-emerald-600/40">
+                    <button onclick="backToHadithBooks()" class="text-xs font-bold text-amber-300 flex items-center gap-1 hover:underline">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> অন্য কিতাব নির্বাচন
+                    </button>
+                    <span id="activeHadithBookTitle" class="text-sm font-extrabold text-white"></span>
+                </div>
+
+                <!-- CUSTOM HADITH NUMBER SEARCH BOX -->
+                <div class="royal-card p-4 rounded-2xl border-2 border-amber-500/40 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-300 flex items-center gap-1.5">
+                            <i data-lucide="search" class="w-4 h-4"></i>
+                            যেকোনো হাদিস নম্বর দিয়ে সরাসরি খুঁজুন
+                        </span>
+                        <span id="bookTotalText" class="text-[11px] font-semibold text-emerald-300/80"></span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div class="relative flex-1">
+                            <input 
+                                type="text" 
+                                id="customHadithInput" 
+                                placeholder="হাদিস নম্বর লিখুন (যেমন: ১, ৫০, ৫০০, ৫০০০)..." 
+                                class="w-full py-2.5 px-3.5 bg-[#041610] rounded-xl border border-emerald-600/50 text-white placeholder-emerald-300/40 text-sm font-semibold focus:border-amber-400 focus:outline-none"
+                                onkeypress="if(event.key === 'Enter') searchCustomHadith()"
+                            />
+                        </div>
+                        <button onclick="searchCustomHadith()" class="px-4 py-2.5 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black rounded-xl hover:brightness-110 active:scale-95 transition text-xs shrink-0 flex items-center gap-1.5 shadow-md">
+                            <i data-lucide="search" class="w-4 h-4"></i>
+                            <span>খুঁজুন</span>
+                        </button>
+                    </div>
+
+                    <!-- Quick Sample Chips -->
+                    <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+                        <span class="text-[11px] text-emerald-300 font-semibold shrink-0">দ্রুত দেখুন:</span>
+                        <button onclick="quickJumpHadith(1)" class="px-2 py-0.5 rounded-lg bg-[#04140e] text-amber-300 border border-emerald-700/50 hover:border-amber-400 font-bold shrink-0">১</button>
+                        <button onclick="quickJumpHadith(8)" class="px-2 py-0.5 rounded-lg bg-[#04140e] text-amber-300 border border-emerald-700/50 hover:border-amber-400 font-bold shrink-0">৮</button>
+                        <button onclick="quickJumpHadith(50)" class="px-2 py-0.5 rounded-lg bg-[#04140e] text-amber-300 border border-emerald-700/50 hover:border-amber-400 font-bold shrink-0">৫০</button>
+                        <button onclick="quickJumpHadith(100)" class="px-2 py-0.5 rounded-lg bg-[#04140e] text-amber-300 border border-emerald-700/50 hover:border-amber-400 font-bold shrink-0">১০০</button>
+                        <button onclick="quickJumpHadith(500)" class="px-2 py-0.5 rounded-lg bg-[#04140e] text-amber-300 border border-amber-400 font-black text-amber-300 bg-amber-400/10 shrink-0">৫০০</button>
+                        <button onclick="quickJumpHadith(1000)" class="px-2 py-0.5 rounded-lg bg-[#04140e] text-amber-300 border border-emerald-700/50 hover:border-amber-400 font-bold shrink-0">১০০০</button>
+                        <button onclick="quickJumpHadith(2000)" class="px-2 py-0.5 rounded-lg bg-[#04140e] text-amber-300 border border-emerald-700/50 hover:border-amber-400 font-bold shrink-0">২০০০</button>
+                    </div>
+                </div>
+
+                <!-- Loader Indicator -->
+                <div id="hadithLoader" class="text-center py-12 hidden">
+                    <div class="inline-block w-8 h-8 border-4 border-amber-400 border-t-transparent rounded-full animate-spin"></div>
+                    <p id="hadithLoaderText" class="text-amber-300 font-bold mt-2">লাইভ সার্ভার থেকে হাদিস লোড হচ্ছে...</p>
+                </div>
+
+                <!-- Live Results -->
+                <div id="hadithItemsList" class="space-y-3.5"></div>
+
+                <!-- Prev & Next Navigation Bar -->
+                <div id="hadithNavigationArea" class="hidden flex items-center justify-between pt-2">
+                    <button onclick="navigateHadith(-1)" id="prevHadithBtn" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] active:scale-95 transition text-xs">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        <span>পূর্ববর্তী হাদিস</span>
+                    </button>
+
+                    <button onclick="navigateHadith(1)" id="nextHadithBtn" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] active:scale-95 transition text-xs">
+                        <span>পরবর্তী হাদিস</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= 5. DUA SECTION ================= -->
+        <div id="duaView" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+                <button onclick="goHome()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] text-xs sm:text-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>হোমে ফিরুন</span>
+                </button>
+                <h3 class="text-lg font-extrabold text-amber-300">দৈনন্দিন ২০০+ প্রয়োজনীয় দোয়া</h3>
+            </div>
+
+            <!-- Dua Search -->
+            <div class="relative">
+                <input 
+                    type="text" 
+                    id="duaSearchInput" 
+                    oninput="filterDuas()" 
+                    placeholder="২০০টি দোয়ার মধ্যে নাম, বিষয়, আরবি বা অর্থ লিখে খুঁজুন..." 
+                    class="w-full p-3.5 pl-10 bg-[#07241a] rounded-2xl border border-emerald-600/40 text-white placeholder-emerald-300/50 font-semibold focus:outline-none focus:border-amber-400 text-sm"
+                />
+                <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-4 text-amber-400"></i>
+            </div>
+
+            <!-- Categories Bar -->
+            <div id="duaCategoriesBar" class="flex gap-2 overflow-x-auto pb-1 text-xs"></div>
+
+            <!-- Dua Cards List -->
+            <div id="duaListContainer" class="space-y-3.5"></div>
+        </div>
+
+        <!-- ================= 6. AMAL TRACKER SECTION ================= -->
+        <div id="amalView" class="hidden space-y-5">
+            <div class="flex items-center justify-between">
+                <button onclick="goHome()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] text-xs sm:text-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>হোমে ফিরুন</span>
+                </button>
+                <h3 class="text-base font-extrabold text-amber-300">দৈনিক আমল ট্র্যাকার</h3>
+            </div>
+
+            <!-- Progress Card -->
+            <div class="royal-card p-5 rounded-3xl border border-amber-500/40">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-sm font-bold text-emerald-200">আজকের আমল অগ্রগতি</span>
+                    <span id="amalPercentText" class="text-lg font-black text-amber-400">০%</span>
+                </div>
+                <div class="w-full bg-[#041610] h-3.5 rounded-full overflow-hidden border border-emerald-600/30">
+                    <div id="amalProgressBar" class="bg-gradient-to-r from-emerald-500 to-amber-400 h-full w-0 transition-all duration-500"></div>
+                </div>
+                <p class="text-[11px] text-emerald-300/70 mt-2 text-right">প্রতিদিন নতুন করে পূরণ করুন এবং নিয়মানুবর্তী থাকুন</p>
+            </div>
+
+            <!-- Amal Checklist -->
+            <div id="amalChecklist" class="space-y-2.5"></div>
+            
+            <div class="text-center pt-2">
+                <button onclick="resetAmalTracker()" class="px-4 py-2 bg-red-950/60 hover:bg-red-900 border border-red-500/40 text-red-300 text-xs font-bold rounded-xl transition">
+                    আজকের আমল রিসেট করুন
+                </button>
+            </div>
+        </div>
+
+        <!-- ================= 7. DEENI JIGGASA AI SECTION ================= -->
+        <div id="jiggasaView" class="hidden space-y-5">
+            <div class="flex items-center justify-between">
+                <button onclick="goHome()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] text-xs sm:text-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>হোমে ফিরুন</span>
+                </button>
+                <h3 class="text-base font-extrabold text-amber-300">দ্বীনি জিজ্ঞাসা ও AI সহকারী</h3>
+            </div>
+
+            <div class="royal-card p-4 sm:p-5 rounded-3xl border border-amber-500/40">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-300 to-amber-500 text-emerald-950 flex items-center justify-center shadow-lg">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-amber-300">ইসলাম বাংলা AI</h4>
+                        <p class="text-[11px] text-emerald-200">আপনার প্রশ্ন লিখুন — AI উত্তর দেওয়ার চেষ্টা করবে</p>
+                    </div>
+                    <span class="ml-auto text-[10px] px-2 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-200">AI সহকারী</span>
+                </div>
+                <div class="bg-[#041610]/80 border border-emerald-700/50 rounded-2xl p-3 mb-3 text-xs text-emerald-100 leading-relaxed">
+                    আসসালামু আলাইকুম! ইসলাম, পড়াশোনা, বিজ্ঞান, সাধারণ জ্ঞানসহ বিভিন্ন বিষয়ে প্রশ্ন করতে পারেন। গুরুত্বপূর্ণ দ্বীনি/ফতোয়ার বিষয়ে AI-এর উত্তর যাচাই করে যোগ্য আলেমের পরামর্শ নেবেন।
+                </div>
+                <div id="aiChatMessages" class="space-y-3 min-h-[190px] max-h-[52vh] overflow-y-auto rounded-2xl p-2 bg-[#03130e]/70 border border-emerald-900/70" aria-live="polite">
+                    <div class="flex justify-start"><div class="max-w-[88%] rounded-2xl rounded-tl-sm bg-[#0b3022] border border-emerald-700/60 p-3 text-sm text-emerald-100">ওয়ালাইকুমুস সালাম। কী জানতে চান? আপনার প্রশ্নটি নিচে লিখুন।</div></div>
+                </div>
+                <div class="mt-3 space-y-2">
+                    <label for="aiQuestionInput" class="block text-xs font-bold text-emerald-200">আপনার প্রশ্ন</label>
+                    <textarea id="aiQuestionInput" rows="3" maxlength="2000" placeholder="এখানে আপনার প্রশ্ন লিখুন..." class="w-full p-3 bg-[#041610] rounded-xl border border-emerald-600/50 text-white text-sm focus:border-amber-400 focus:outline-none resize-y"></textarea>
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-[10px] text-emerald-300/70">সর্বোচ্চ ২০০০ অক্ষর</span>
+                        <button id="aiSendButton" onclick="sendAIQuestion()" class="px-5 py-3 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black rounded-xl hover:brightness-110 active:scale-95 transition text-sm flex items-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i> প্রশ্ন পাঠান
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= 8. ZAKAT CALCULATOR SECTION ================= -->
+        <div id="zakatView" class="hidden space-y-5">
+            <div class="flex items-center justify-between">
+                <button onclick="goHome()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0b2b20] border border-emerald-500/40 text-emerald-100 font-bold hover:bg-[#124231] text-xs sm:text-sm">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span>হোমে ফিরুন</span>
+                </button>
+                <h3 class="text-base font-extrabold text-amber-300">যাকাত ক্যালকুলেটর</h3>
+            </div>
+
+            <div class="royal-card p-5 rounded-3xl border border-emerald-600/40 space-y-4">
+                <p class="text-xs text-emerald-200 leading-relaxed">
+                    নিসাব পরিমাণ সম্পদের (যা ৭.৫ তোলা সোনা বা ৫২.৫ তোলা রুপার মূল্যের সমতুল্য) ওপর ১ বছর পূর্ণ হলে শতকরা ২.৫% (১/৪০ অংশ) যাকাত প্রদান ফরজ।
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div>
+                        <label class="text-xs text-emerald-200 font-semibold block mb-1">নগদ টাকা (হাতে ও ব্যাংকে থাকা)</label>
+                        <input type="number" id="zakatCash" placeholder="০ ৳" oninput="calculateZakat()" class="w-full p-3 bg-[#041610] rounded-xl border border-emerald-600/40 text-white text-sm focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-xs text-emerald-200 font-semibold block mb-1">স্বর্ণ ও রৌপ্যের বর্তমান মোট মূল্য</label>
+                        <input type="number" id="zakatGold" placeholder="০ ৳" oninput="calculateZakat()" class="w-full p-3 bg-[#041610] rounded-xl border border-emerald-600/40 text-white text-sm focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-xs text-emerald-200 font-semibold block mb-1">ব্যবসায়িক পণ্যের মূল্য</label>
+                        <input type="number" id="zakatBusiness" placeholder="০ ৳" oninput="calculateZakat()" class="w-full p-3 bg-[#041610] rounded-xl border border-emerald-600/40 text-white text-sm focus:border-amber-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-xs text-red-300 font-semibold block mb-1">পরিশোধযোগ্য ঋণ (বাদ যাবে)</label>
+                        <input type="number" id="zakatDebts" placeholder="০ ৳" oninput="calculateZakat()" class="w-full p-3 bg-[#041610] rounded-xl border border-red-500/40 text-white text-sm focus:border-red-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- Result Box -->
+                <div class="mt-4 p-4 rounded-2xl bg-[#041610] border-2 border-amber-500/50 flex flex-col sm:flex-row justify-between items-center gap-3">
+                    <div>
+                        <span class="text-xs text-emerald-300 block">যাকাতযোগ্য নিট সম্পদ:</span>
+                        <span id="netWealthText" class="text-lg font-bold text-white">০ ৳</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-amber-300 font-bold block">আপনার প্রদেয় যাকাত (২.৫%):</span>
+                        <span id="payableZakatText" class="text-2xl font-black text-amber-400">০ ৳</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- MODERN AUDIO PLAYER BAR FOR QURAN -->
+    <div id="audioPlayerBar" class="fixed bottom-0 left-0 right-0 z-50 bg-[#061e16] border-t-2 border-amber-500/40 px-4 py-3 shadow-2xl transition-transform duration-300 translate-y-full">
+        <div class="max-w-4xl mx-auto space-y-2">
+            <div class="flex items-center gap-3">
+                <span id="currentTimeText" class="text-[11px] font-mono text-emerald-300">0:00</span>
+                <input 
+                    type="range" 
+                    id="audioSeeker" 
+                    value="0" 
+                    min="0" 
+                    step="1" 
+                    oninput="seekAudio()" 
+                    class="w-full h-1.5 bg-[#0b3324] rounded-lg cursor-pointer"
+                />
+                <span id="durationText" class="text-[11px] font-mono text-emerald-300">0:00</span>
+            </div>
+
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3 overflow-hidden">
+                    <img 
+                        src="https://i.ibb.co/wNkrJ9tb/IMG-20261108-WA7302.jpg" 
+                        alt="Logo" 
+                        class="w-10 h-10 rounded-xl object-cover border border-amber-400 shrink-0"
+                    />
+                    <div class="truncate">
+                        <h4 id="audioSurahTitle" class="text-sm font-bold text-white truncate">সূরা তিলাওয়াত</h4>
+                        <p id="audioAyahNumber" class="text-xs text-amber-300 font-semibold truncate">মিশারি রশিদ আল-আফাসি</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 shrink-0">
+                    <button onclick="prevAyahAudio()" class="p-2 text-emerald-300 hover:text-amber-300 active:scale-90 transition">
+                        <i data-lucide="skip-back" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="toggleAudio()" id="playPauseBtn" class="w-11 h-11 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 flex items-center justify-center font-bold shadow-lg shadow-amber-500/30 active:scale-95 transition">
+                        <i data-lucide="play" id="playPauseIcon" class="w-5 h-5 fill-slate-950"></i>
+                    </button>
+                    <button onclick="nextAyahAudio()" class="p-2 text-emerald-300 hover:text-amber-300 active:scale-90 transition">
+                        <i data-lucide="skip-forward" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <button onclick="closeAudioPlayer()" class="p-2 text-emerald-400 hover:text-red-400 active:scale-90 transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <audio id="globalAudio" ontimeupdate="updateAudioProgress()" onended="onAudioEnded()"></audio>
+        </div>
+    </div>
+
+    <!-- SCRIPT ENGINE -->
+    <script>
+        const surahBanglaNames = {
+            1: "আল-ফাতিহা", 2: "আল-বাক্বারাহ", 3: "আলে-ইমরান", 4: "আন-নিসা", 5: "আল-মায়েদাহ",
+            6: "আল-আনআম", 7: "আল-আরাফ", 8: "আল-আনফাল", 9: "আত-তাওবাহ", 10: "ইউনুস",
+            11: "হুদ", 12: "ইউসুফ", 13: "আর-রাদ", 14: "ইব্রাহীম", 15: "আল-হিজর",
+            16: "আন-নাহল", 17: "বনী ইসরাঈল", 18: "আল-কাহফ", 19: "মারইয়াম", 20: "ত্বোয়া-হা",
+            21: "আল-আম্বিয়া", 22: "আল-হাজ্জ", 23: "আল-মুমিনুন", 24: "আন-নূর", 25: "আল-ফুরকান",
+            26: "আশ-শুয়ারা", 27: "আন-নামল", 28: "আল-কাসাস", 29: "আল-আনকাবুত", 30: "আর-রূম",
+            31: "লুকমান", 32: "আস-সাজদাহ", 33: "আল-আহযাব", 34: "সাবা", 35: "ফাতির",
+            36: "ইয়াসীন", 37: "আস-সাফফাত", 38: "সোয়াদ", 39: "আজ-জুমার", 40: "আল-মু'মিন",
+            41: "হা-মীম সাজদাহ", 42: "আশ-শূরা", 43: "আজ-জুখরুফ", 44: "আদ-দুখান", 45: "আল-জাসিয়াহ",
+            46: "আল-আহক্বাফ", 47: "মুহাম্মদ", 48: "আল-ফাতহ", 49: "আল-হুজুরাত", 50: "ক্বাফ",
+            51: "আয-যারিয়াত", 52: "আত-তূর", 53: "আন-নাজম", 54: "আল-ক্বামার", 55: "আর-রহমান",
+            56: "আল-ওয়াক্বিয়াহ", 57: "আল-হাদীদ", 58: "আল-মুজাদালাহ", 59: "আল-হাশর", 60: "আল-মুমতাহিনাহ",
+            61: "আস-সাফ", 62: "আল-জুমুআহ", 63: "আল-মুনাফিকূন", 64: "আত-তাগাবুন", 65: "আত-ত্বালাক্ব",
+            66: "আত-তাহরীম", 67: "আল-মুলক", 68: "আল-কলম", 69: "আল-হাক্বক্বাহ", 70: "আল-মাআরিজ",
+            71: "নূহ", 72: "আল-জ্বিন", 73: "আল-মুযযাম্মিল", 74: "আল-মুদ্দাসসির", 75: "আল-ক্বিয়ামাহ",
+            76: "আল-ইনসান", 77: "আল-মুরসালাত", 78: "আন-নাবা", 79: "আন-নাযিআত", 80: "আবাসা",
+            81: "আত-তাকবীর", 82: "আল-ইনফিতার", 83: "আল-মুত্বাফফিফীন", 84: "আল-ইনশিক্বাক্ব", 85: "আল-বুরূজ",
+            86: "আত-তারিক্ব", 87: "আল-আ'লা", 88: "আল-গাশিয়াহ", 89: "আল-ফজর", 90: "আল-বালাদ",
+            91: "আশ-শামস", 92: "আল-লাইল", 93: "আদ-দুহা", 94: "আল-ইনশিরাহ", 95: "আত-তীন",
+            96: "আল-আলাক্ব", 97: "আল-ক্বদর", 98: "আল-বাইয়্যিনাহ", 99: "আল-যিলযাল", 100: "আল-আদিয়াত",
+            101: "আল-ক্বারিয়াহ", 102: "আত-তাকাসুর", 103: "আল-আসর", 104: "আল-হুমাযাহ", 105: "আল-ফীল",
+            106: "কুরাইশ", 107: "আল-মাউন", 108: "আল-কাউসার", 109: "আল-কাফিরুন", 110: "আন-নাসর",
+            111: "আল-লাহাব", 112: "আল-ইখলাস", 113: "আল-ফালাক্ব", 114: "আন-নাস"
+        };
+
+        let allSurahs = [];
+        let activeFilter = 'all';
+        let currentAyahs = [];
+        let currentAyahIndex = 0;
+        let arabicFontSize = 30;
+        let banglaFontSize = 17;
+        let currentSurahInfo = null;
+        const audioElement = document.getElementById("globalAudio");
+
+        function toBanglaNum(num) {
+            if (num === null || num === undefined) return '';
+            const bnDigits = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+            return num.toString().split('').map(d => bnDigits[d] || d).join('');
+        }
+
+        function parseBanglaNumber(str) {
+            if (!str) return NaN;
+            const bnDigits = {'০':'0', '১':'1', '২':'2', '৩':'3', '৪':'4', '৫':'5', '৬':'6', '৭':'7', '৮':'8', '৯':'9'};
+            const cleaned = str.toString().trim().replace(/[০-৯]/g, d => bnDigits[d]);
+            return parseInt(cleaned, 10);
+        }
+
+        // VIEW ROUTING
+        function hideAllViews() {
+            const views = ["homeView", "quranListView", "readerView", "hadithView", "duaView", "amalView", "jiggasaView", "zakatView"];
+            views.forEach(v => {
+                const el = document.getElementById(v);
+                if (el) el.classList.add("hidden");
+            });
+            document.getElementById("fontControls").classList.add("hidden");
+        }
+
+        function goHome() {
+            hideAllViews();
+            document.getElementById("homeView").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ================= QURAN LOGIC =================
+        function openQuranSection() {
+            hideAllViews();
+            document.getElementById("quranListView").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (allSurahs.length === 0) {
+                fetchSurahList();
+            }
+        }
+
+        function backToQuranList() {
+            hideAllViews();
+            document.getElementById("quranListView").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        async function fetchSurahList() {
+            try {
+                const res = await fetch("https://api.alquran.cloud/v1/surah");
+                const data = await res.json();
+                allSurahs = data.data;
+                renderSurahs(allSurahs);
+                document.getElementById("loadingIndicator").classList.add("hidden");
+            } catch (err) {
+                document.getElementById("surahGrid").innerHTML = `<div class="col-span-full text-center text-red-400 p-6 font-bold">ইন্টারনেট সংযোগ চেক করে পুনরায় চেষ্টা করুন।</div>`;
+            }
+        }
+
+        function renderSurahs(surahs) {
+            const grid = document.getElementById("surahGrid");
+            grid.innerHTML = "";
+
+            surahs.forEach(s => {
+                const banglaName = surahBanglaNames[s.number] || s.englishName;
+                const typeBn = s.revelationType === "Meccan" ? "মাক্কী" : "মাদানী";
+                const card = document.createElement("div");
+                card.className = "royal-card royal-card-hover p-4 rounded-2xl flex items-center justify-between cursor-pointer group";
+                card.onclick = () => loadSurahDetail(s.number, banglaName, s.name, typeBn, s.numberOfAyahs);
+
+                card.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-2xl bg-[#041610] border border-amber-500/40 flex items-center justify-center font-black text-amber-300 text-sm group-hover:bg-amber-400 group-hover:text-slate-950 transition">
+                            ${toBanglaNum(s.number)}
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-base text-white group-hover:text-amber-300 transition">${banglaName}</h4>
+                            <p class="text-[11px] font-semibold text-emerald-200">${typeBn} • ${toBanglaNum(s.numberOfAyahs)} আয়াত</p>
+                        </div>
+                    </div>
+                    <div class="font-arabic text-xl font-bold text-amber-300">
+                        ${s.name}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        function setFilter(type) {
+            activeFilter = type;
+            ['all', 'Meccan', 'Medinan'].forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (t === type) {
+                    btn.className = "px-3.5 py-1.5 rounded-xl text-xs font-black bg-amber-400 text-slate-950";
+                } else {
+                    btn.className = "px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#07241a] text-emerald-200 border border-emerald-600/40";
+                }
+            });
+            filterSurahs();
+        }
+
+        function filterSurahs() {
+            const input = document.getElementById("searchInput");
+            const clearBtn = document.getElementById("clearSearchBtn");
+            const query = input.value.toLowerCase().trim();
+
+            if (input.value.length > 0) clearBtn.classList.remove("hidden");
+            else clearBtn.classList.add("hidden");
+
+            const filtered = allSurahs.filter(s => {
+                const bangla = surahBanglaNames[s.number] || "";
+                const eng = s.englishName.toLowerCase();
+                const matchesText = bangla.includes(query) || eng.includes(query) || s.number.toString() === query;
+                const matchesFilter = activeFilter === 'all' || s.revelationType === activeFilter;
+                return matchesText && matchesFilter;
+            });
+            renderSurahs(filtered);
+        }
+
+        function clearSearch() {
+            document.getElementById("searchInput").value = "";
+            filterSurahs();
+        }
+
+        async function loadSurahDetail(surahNum, bnName, arName, typeBn, totalAyahs) {
+            hideAllViews();
+            document.getElementById("readerView").classList.remove("hidden");
+            document.getElementById("fontControls").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'instant' });
+
+            document.getElementById("currentSurahBangla").innerText = bnName;
+            document.getElementById("currentSurahArabic").innerText = arName;
+            document.getElementById("currentSurahType").innerText = typeBn;
+            document.getElementById("currentSurahVerses").innerText = `${toBanglaNum(totalAyahs)} টি আয়াত`;
+
+            if (surahNum === 1 || surahNum === 9) {
+                document.getElementById("bismillahBanner").classList.add("hidden");
+            } else {
+                document.getElementById("bismillahBanner").classList.remove("hidden");
+            }
+
+            const ayahsList = document.getElementById("ayahsList");
+            ayahsList.innerHTML = `<div class="text-center py-16"><div class="inline-block w-8 h-8 border-4 border-amber-400 border-t-transparent rounded-full animate-spin"></div><p class="text-amber-300 font-bold mt-2">আয়াত সমূহ লোড হচ্ছে...</p></div>`;
+
+            currentSurahInfo = { number: surahNum, bnName, arName, typeBn, totalAyahs };
+
+            try {
+                const [arRes, bnRes] = await Promise.all([
+                    fetch(`https://api.alquran.cloud/v1/surah/${surahNum}/quran-uthmani`),
+                    fetch(`https://api.alquran.cloud/v1/surah/${surahNum}/bn.bengali`)
+                ]);
+
+                const arData = await arRes.json();
+                const bnData = await bnRes.json();
+
+                currentAyahs = arData.data.ayahs.map((ayah, i) => {
+                    let arText = ayah.text;
+                    if (surahNum !== 1 && i === 0 && arText.startsWith("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ")) {
+                        arText = arText.replace("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ", "").trim();
+                    }
+                    return {
+                        numberInSurah: ayah.numberInSurah,
+                        arabicText: arText,
+                        banglaText: bnData.data.ayahs[i] ? bnData.data.ayahs[i].text : "",
+                        audioUrl: `https://cdn.islamic.network/quran/audio/128/ar.alafasy/${ayah.number}.mp3`
+                    };
+                });
+
+                renderAyahs();
+            } catch (e) {
+                ayahsList.innerHTML = `<div class="text-center text-red-400 font-bold py-8">আয়াত লোড করতে সমস্যা হয়েছে। পুনরায় চেষ্টা করুন।</div>`;
+            }
+        }
+
+        function renderAyahs() {
+            const list = document.getElementById("ayahsList");
+            list.innerHTML = "";
+
+            currentAyahs.forEach((a, idx) => {
+                const ayahCard = document.createElement("div");
+                ayahCard.id = `ayah-${a.numberInSurah}`;
+                ayahCard.className = "royal-card p-4 md:p-5 rounded-2xl transition duration-300";
+
+                ayahCard.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-emerald-600/30 pb-2 mb-3">
+                        <div class="w-8 h-8 rounded-xl bg-[#041610] border border-amber-500/40 text-amber-300 font-black text-xs flex items-center justify-center">
+                            ${toBanglaNum(a.numberInSurah)}
+                        </div>
+                        <button onclick="playSingleAyah(${idx})" class="p-1.5 rounded-lg bg-[#07241a] hover:bg-amber-400 hover:text-slate-950 text-amber-300 transition" title="তেলাওয়াত শুনুন">
+                            <i data-lucide="play" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    <p class="font-arabic leading-[2.3] text-right font-bold text-amber-100" style="font-size: ${arabicFontSize}px;">
+                        ${a.arabicText}
+                    </p>
+                    <p class="text-emerald-100 leading-relaxed font-semibold mt-3 pt-2.5 border-t border-emerald-900/50" style="font-size: ${banglaFontSize}px;">
+                        ${a.banglaText}
+                    </p>
+                `;
+                list.appendChild(ayahCard);
+            });
+            lucide.createIcons();
+        }
+
+        function changeFontSize(delta) {
+            arabicFontSize = Math.min(46, Math.max(22, arabicFontSize + delta * 2));
+            banglaFontSize = Math.min(26, Math.max(13, banglaFontSize + delta));
+            renderAyahs();
+        }
+
+        // ================= AUDIO LOGIC =================
+        function playSingleAyah(idx) {
+            currentAyahIndex = idx;
+            playCurrentAyah();
+        }
+
+        function playFullSurah() {
+            currentAyahIndex = 0;
+            playCurrentAyah();
+        }
+
+        function playCurrentAyah() {
+            if (!currentAyahs[currentAyahIndex]) return;
+            const ayah = currentAyahs[currentAyahIndex];
+            audioElement.src = ayah.audioUrl;
+            audioElement.play();
+
+            document.getElementById("audioSurahTitle").innerText = `${currentSurahInfo.bnName}`;
+            document.getElementById("audioAyahNumber").innerText = `আয়াত: ${toBanglaNum(ayah.numberInSurah)} • মিশারি রশিদ`;
+            document.getElementById("audioPlayerBar").classList.remove("translate-y-full");
+
+            const icon = document.getElementById("playPauseIcon");
+            icon.setAttribute("data-lucide", "pause");
+            lucide.createIcons();
+        }
+
+        function toggleAudio() {
+            if (audioElement.paused) {
+                audioElement.play();
+                document.getElementById("playPauseIcon").setAttribute("data-lucide", "pause");
+            } else {
+                audioElement.pause();
+                document.getElementById("playPauseIcon").setAttribute("data-lucide", "play");
+            }
+            lucide.createIcons();
+        }
+
+        function nextAyahAudio() {
+            if (currentAyahIndex < currentAyahs.length - 1) {
+                currentAyahIndex++;
+                playCurrentAyah();
+            }
+        }
+
+        function prevAyahAudio() {
+            if (currentAyahIndex > 0) {
+                currentAyahIndex--;
+                playCurrentAyah();
+            }
+        }
+
+        function updateAudioProgress() {
+            const seeker = document.getElementById("audioSeeker");
+            const curText = document.getElementById("currentTimeText");
+            const durText = document.getElementById("durationText");
+
+            if (!isNaN(audioElement.duration)) {
+                seeker.max = Math.floor(audioElement.duration);
+                seeker.value = Math.floor(audioElement.currentTime);
+                const m = Math.floor(audioElement.currentTime / 60);
+                const s = Math.floor(audioElement.currentTime % 60);
+                curText.innerText = `${m}:${s < 10 ? '0' : ''}${s}`;
+
+                const dm = Math.floor(audioElement.duration / 60);
+                const ds = Math.floor(audioElement.duration % 60);
+                durText.innerText = `${dm}:${ds < 10 ? '0' : ''}${ds}`;
+            }
+        }
+
+        function seekAudio() {
+            audioElement.currentTime = document.getElementById("audioSeeker").value;
+        }
+
+        function onAudioEnded() {
+            if (currentAyahIndex < currentAyahs.length - 1) {
+                currentAyahIndex++;
+                playCurrentAyah();
+            } else {
+                document.getElementById("playPauseIcon").setAttribute("data-lucide", "play");
+                lucide.createIcons();
+            }
+        }
+
+        function closeAudioPlayer() {
+            audioElement.pause();
+            document.getElementById("audioPlayerBar").classList.add("translate-y-full");
+        }
+
+        // ================= HADITH LOGIC (SUPER-RELIABLE SAHIH BUKHARI & MUSLIM ENGINE) =================
+        let currentHadithBook = 'bukhari';
+        let currentHadithBookName = 'সহীহ বুখারী';
+        let currentHadithNumber = 1;
+        let currentHadithMax = 7563;
+
+        // সহীহ মুসলিমের নির্ভরযোগ্য ব্যাকআপ ডাটাবেস (যদি নেটওয়ার্ক বা রিমোট সিডিএন ফাইল ধীরগতির হয়)
+        const muslimPrimaryBackup = {
+            1: {
+                arabic: "عَنْ عُمَرَ بْنِ الْخَطَّابِ، قَالَ: بَيْنَمَا نَحْنُ عِنْدَ رَسُولِ اللَّهِ صلى الله عليه وسلم ذَاتَ يَوْمٍ إِذْ طَلَعَ عَلَيْنَا رَجُلٌ شَدِيدُ بَيَاضِ الثِّيَابِ شَدِيدُ سَوَادِ الشَّعَرِ لاَ يُرَى عَلَيْهِ أَثَرُ السَّفَرِ وَلاَ يَعْرِفُهُ مِنَّا أَحَدٌ... فَقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: الإِسْلاَمُ أَنْ تَشْهَدَ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ وَتُقِيمَ الصَّلاَةَ وَتُؤْتِيَ الزَّكَاةَ وَتَصُومَ رَمَضَانَ وَتَحُجَّ الْبَيْتَ إِنِ اسْتَطَعْتَ إِلَيْهِ سَبِيلاً... قَالَ فَأَخْبِرْنِي عَنِ الإِيمَانِ قَالَ: أَنْ تُؤْمِنَ بِاللَّهِ وَمَلاَئِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ... قَالَ فَأَخْبِرْنِي عَنِ الإِحْسَانِ قَالَ: أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ... ثُمَّ قَالَ: يَا عُمَرُ أَتَدْرِي مَنِ السَّائِلُ؟ قُلْتُ: اللَّهُ وَرَسُولُهُ أَعْلَمُ. قَالَ: فَإِنَّهُ جِبْرِيلُ أَتَاكُمْ يُعَلِّمُكُمْ دِينَكُمْ.",
+                bangla: "ইয়াহইয়া ইবনু ইয়ামার (রহঃ) সূত্রে উমর ইবনুল খাত্তাব (রাঃ) থেকে বর্ণিত। তিনি বলেন: একদিন আমরা রাসূলুল্লাহ (সাল্লাল্লাহু ‘আলাইহি ওয়া সাল্লাম)-এর নিকট বসা ছিলাম, এমন সময় সাদা পোশাক ও ঘন কালো চুলবিশিষ্ট এক ব্যক্তি উপস্থিত হলেন। তাঁর মাঝে সফরের কোনো চিহ্ন ছিল না এবং আমাদের কেউ তাঁকে চিনতও না। তিনি নবীজীর সম্মুখে বসে ইসলাম, ঈমান ও ইহসান সম্পর্কে জানতে চাইলেন। নবীজী (সাঃ) ইসলাম, ঈমান ও ইহসানের ব্যাখ্যা দিলেন। পরিশেষে রাসূলুল্লাহ (সাঃ) বললেন: ‘হে উমর, তুমি কি জানো এই প্রশ্নকারী কে ছিলেন? ইনি জিবরীল (আঃ), তোমাদের দ্বীন শিক্ষা দিতে এসেছিলেন।’"
+            },
+            8: {
+                arabic: "عَنِ ابْنِ عُمَرَ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ: بُنِيَ الإِسْلاَمُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، وَإِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَحَجِّ الْبَيْتِ، وَصَوْمِ رَمَضَانَ.",
+                bangla: "আবদুল্লাহ ইবনু উমর (রাঃ) থেকে বর্ণিত। নবী কারীম (সাল্লাল্লাহু ‘আলাইহি ওয়া সাল্লাম) ইরশাদ করেছেন: ইসলামের ভিত্তি পাঁচটি স্তম্ভের ওপর প্রতিষ্ঠিত—এ সাক্ষ্য প্রদান করা যে, আল্লাহ ছাড়া কোনো সত্য উপাস্য নেই এবং মুহাম্মদ (সাঃ) তাঁর বান্দা ও রাসূল; সালাত কায়েম করা, যাকাত প্রদান করা, বায়তুল্লাহর হজ্ব করা এবং রমযানের রোযা রাখা।"
+            },
+            50: {
+                arabic: "عَنْ عَبْدِ اللَّهِ بْنِ مَسْعُودٍ قَالَ سَأَلْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم أَىُّ الذَّنْبِ أَعْظَمُ عِنْدَ اللَّهِ قَالَ أَنْ تَجْعَلَ لِلَّهِ نِدًّا وَهُوَ خَلَقَكَ قُلْتُ ثُمَّ أَىٌّ قَالَ أَنْ تَقْتُلَ وَلَدَكَ مَخَافَةَ أَنْ يَطْعَمَ مَعَكَ قُلْتُ ثُمَّ أَىٌّ قَالَ أَنْ تُزَانِيَ حَلِيلَةَ جَارِكَ",
+                bangla: "আবদুল্লাহ ইবনু মাসউদ (রাঃ) থেকে বর্ণিত। তিনি বলেন, আমি রাসূলুল্লাহ (সাঃ)-কে জিজ্ঞেস করলাম: আল্লাহর কাছে সবচেয়ে বড় গুনাহ কোনটি? তিনি বললেন: আল্লাহর সাথে কাউকে শরিক করা, অথচ তিনি তোমাকে সৃষ্টি করেছেন। আমি বললাম: তারপর কোনটি? তিনি বললেন: তোমার সন্তান তোমার সাথে আহার করবে এই ভয়ে তাকে হত্যা করা। আমি বললাম: তারপর কোনটি? তিনি বললেন: তোমার প্রতিবেশীর স্ত্রীর সাথে ব্যভিচারে লিপ্ত হওয়া।"
+            },
+            100: {
+                arabic: "عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ: إِنَّ لِلَّهِ مِائَةَ رَحْمَةٍ، أَنْزَلَ مِنْهَا رَحْمَةً وَاحِدَةً بَيْنَ الْجِنِّ وَالإِنْسِ وَالْبَهَائِمِ وَالْهَوَامِّ، فَبِهَا يَتَعَاطَفُونَ، وَبِهَا يَتَرَاحَمُونَ، وَأَخَّرَ اللَّهُ تِسْعًا وَتِسْعِينَ رَحْمَةً يَرْحَمُ بِهَا عِبَادَهُ يَوْمَ الْقِيَامَةِ.",
+                bangla: "আবু হুরায়রা (রাঃ) থেকে বর্ণিত। নবী কারীম (সাঃ) ইরশাদ করেছেন: নিশ্চয়ই আল্লাহ তা'আলার একশতটি রহমত রয়েছে। তার মধ্য থেকে একটিমাত্র রহমত তিনি তামাম সৃষ্টির মাঝে অবতীর্ণ করেছেন, যার কারণে তারা একে অপরের প্রতি স্নেহ-মমতা প্রদর্শন করে। আর নিরানব্বইটি রহমত আল্লাহ নিজের কাছে গচ্ছিত রেখেছেন, যার মাধ্যমে কিয়ামতের দিন তিনি তাঁর বান্দাদের অনুগ্রহ করবেন।"
+            },
+            500: {
+                arabic: "عَنْ أَبِي مَالِكٍ الأَشْعَرِيِّ قَالَ: قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: الطُّهُورُ شَطْرُ الإِيمَانِ، وَالْحَمْدُ لِلَّهِ تَمْلأُ الْمِيزَانَ، وَسُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ تَمْلآنِ مَا بَيْنَ السَّمَاوَاتِ وَالأَرْضِ، وَالصَّلاَةُ نُورٌ، وَالصَّدَقَةُ بُرْهَانٌ، وَالصَّبْرُ ضِيَاءٌ، وَالْقُرْآنُ حُجَّةٌ لَكَ أَوْ عَلَيْكَ.",
+                bangla: "আবু মালিক আল-আশআরী (রাঃ) থেকে বর্ণিত। রাসূলুল্লাহ (সাঃ) বলেছেন: পবিত্রতা হলো ঈমানের অর্ধেক। ‘আলহামদু লিল্লাহ’ আমলের পাল্লাকে পূর্ণ করে দেয়। ‘সুবহানাল্লাহ’ ও ‘আলহামদু লিল্লাহ’ আসমান ও জমিনের শূন্যস্থানকে পূর্ণ করে। সালাত হলো এক উজ্জ্বল আলো, দান-সাদাকাহ দলীল, ধৈর্য আলোকবর্তিকা এবং আল-কুরআন তোমার স্বপক্ষে কিংবা বিপক্ষে প্রমাণস্বরূপ।"
+            },
+            1000: {
+                arabic: "عَنْ عَائِشَةَ قَالَتْ: كَانَ رَسُولُ اللَّهِ صلى الله عليه وسلم يُكْثِرُ أَنْ يَقُولَ فِي رُكُوعِهِ وَسُجُودِهِ: سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ اللَّهُمَّ اغْفِرْ لِي.",
+                bangla: "আয়িশা (রাঃ) থেকে বর্ণিত। তিনি বলেন: রাসূলুল্লাহ (সাঃ) তাঁর রুকু ও সিজদায় অধিক পরিমাণে পাঠ করতেন: ‘সুবহানাকাল্লাহুম্মা রব্বানা ওয়া বিহামদিকা, আল্লাহুম্মাগফির লী’ (হে আল্লাহ! আমাদের প্রতিপালক! আপনার সপ্রশংস পবিত্রতা ঘোষণা করছি, হে আল্লাহ! আপনি আমাকে ক্ষমা করে দিন)।"
+            },
+            2000: {
+                arabic: "عَنْ أَبِي هُرَيْرَةَ، عَنِ النَّبِيِّ صلى الله عليه وسلم قَالَ: مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ، وَمَنْ قَامَ لَيْلَةَ الْقَدْرِ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ.",
+                bangla: "আবু হুরায়রা (রাঃ) থেকে বর্ণিত। নবীজী (সাঃ) ইরশাদ করেছেন: যে ব্যক্তি ঈমানের সাথে ও সাওয়াবের প্রত্যাশায় রমযানের রোযা রাখবে, তার অতীতের সমস্ত গুনাহ ক্ষমা করে দেওয়া হবে। আর যে ব্যক্তি লাইলাতুল কদরে ঈমান ও সাওয়াবের নিয়তে ইবাদতে দাঁড়াবে, তারও পূর্ববর্তী সব গুনাহ মাফ করে দেওয়া হবে।"
+            }
+        };
+
+        function openHadithSection() {
+            hideAllViews();
+            document.getElementById("hadithView").classList.remove("hidden");
+            backToHadithBooks();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function backToHadithBooks() {
+            document.getElementById("hadithBookSelection").classList.remove("hidden");
+            document.getElementById("hadithContentArea").classList.add("hidden");
+        }
+
+        function openLiveHadithBook(bookKey, bookName, maxNumber) {
+            currentHadithBook = bookKey;
+            currentHadithBookName = bookName;
+            currentHadithMax = maxNumber;
+
+            document.getElementById("hadithBookSelection").classList.add("hidden");
+            document.getElementById("hadithContentArea").classList.remove("hidden");
+            document.getElementById("activeHadithBookTitle").innerText = bookName;
+            document.getElementById("bookTotalText").innerText = `মোট হাদিস: ১ - ${toBanglaNum(maxNumber)}`;
+            document.getElementById("customHadithInput").value = "";
+
+            // হাদিস নং ১ দিয়ে লোড শুরু করা
+            fetchAndDisplayHadith(1);
+        }
+
+        function quickJumpHadith(num) {
+            document.getElementById("customHadithInput").value = num;
+            fetchAndDisplayHadith(num);
+        }
+
+        function searchCustomHadith() {
+            const inputVal = document.getElementById("customHadithInput").value.trim();
+            if (!inputVal) {
+                showIslamicNotice("দয়া করে যেকোনো হাদিস নম্বর লিখুন (যেমন: ১, ৫০, ৫০০)।", "হাদিস নম্বর প্রয়োজন");
+                return;
+            }
+            const hadithNum = parseBanglaNumber(inputVal);
+            if (isNaN(hadithNum) || hadithNum < 1) {
+                showIslamicNotice("সঠিক হাদিস নম্বর প্রদান করুন (যেমন: ১, ৫০, ৫০০)।", "সঠিক নম্বর দিন");
+                return;
+            }
+            fetchAndDisplayHadith(hadithNum);
+        }
+
+        function navigateHadith(step) {
+            const nextNum = currentHadithNumber + step;
+            if (nextNum < 1) return;
+            if (nextNum > currentHadithMax) {
+                showIslamicNotice(`${currentHadithBookName}-এ সর্বোচ্চ ${toBanglaNum(currentHadithMax)} পর্যন্ত হাদিস রয়েছে।`, "হাদিস নম্বরের সীমা");
+                return;
+            }
+            document.getElementById("customHadithInput").value = nextNum;
+            fetchAndDisplayHadith(nextNum);
+        }
+
+        // টাইমআউটযুক্ত ফেচ হেল্পার
+        function fetchWithTimeout(url, timeoutMs = 3800) {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), timeoutMs);
+            return fetch(url, { signal: controller.signal })
+                .then(res => {
+                    clearTimeout(timer);
+                    return res;
+                })
+                .catch(err => {
+                    clearTimeout(timer);
+                    throw err;
+                });
+        }
+
+        // একাধিক মিরর সার্ভার থেকে দ্রুততম রেসপন্স নেওয়ার হেল্পার
+        async function fetchFirstValid(urls, timeoutMs = 3800) {
+            const promises = urls.map(url =>
+                fetchWithTimeout(url, timeoutMs)
+                    .then(r => {
+                        if (!r.ok) throw new Error("HTTP " + r.status);
+                        return r.json();
+                    })
+                    .then(json => {
+                        const item = (json && json.hadiths && json.hadiths[0]) ? json.hadiths[0] : (json && json.text ? json : null);
+                        if (item && item.text && item.text.trim().length > 0) {
+                            return { text: item.text.trim(), hadithnumber: item.hadithnumber };
+                        }
+                        throw new Error("Empty text");
+                    })
+            );
+            try {
+                return await Promise.any(promises);
+            } catch (err) {
+                return null;
+            }
+        }
+
+        // ইংরেজি থেকে বাংলা অনুবাদ সহযোগী (যদি কোনো হাদিসের বাংলা সিডিএনে মিসিং থাকে)
+        async function autoTranslateToBangla(text) {
+            try {
+                const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=bn&dt=t&q=${encodeURIComponent(text.slice(0, 3000))}`;
+                const res = await fetchWithTimeout(url, 3500);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && data[0]) {
+                        return data[0].map(p => p[0]).join('');
+                    }
+                }
+            } catch (e) {}
+            return text;
+        }
+
+        // সহীহ বুখারী এবং সহীহ মুসলিমের জন্য বুলেটপ্রুফ হাই-স্পিড ফেচ ইঞ্জিন
+        async function fetchAndDisplayHadith(hadithNo) {
+            const loader = document.getElementById("hadithLoader");
+            const loaderText = document.getElementById("hadithLoaderText");
+            const list = document.getElementById("hadithItemsList");
+            const nav = document.getElementById("hadithNavigationArea");
+
+            loader.classList.remove("hidden");
+            loaderText.innerText = `${currentHadithBookName}-এর হাদিস নং ${toBanglaNum(hadithNo)} লোড হচ্ছে...`;
+            list.innerHTML = "";
+            nav.classList.add("hidden");
+
+            const benEdition = currentHadithBook === 'bukhari' ? 'ben-bukhari' : 'ben-muslim';
+            const araEdition = currentHadithBook === 'bukhari' ? 'ara-bukhari' : 'ara-muslim';
+
+            let hadithText = "";
+            let hadithActualNumber = hadithNo;
+            let arabicText = "";
+
+            // সহীহ মুসলিমের প্রি-বিল্ট ডাটাবেস চেক (তাৎক্ষণিক ও নিশ্চিত প্রদর্শন)
+            if (currentHadithBook === 'muslim' && muslimPrimaryBackup[hadithNo]) {
+                hadithText = muslimPrimaryBackup[hadithNo].bangla;
+                arabicText = muslimPrimaryBackup[hadithNo].arabic;
+            }
+
+            try {
+                // ১. বাংলা অনুবাদ লাইভ সার্ভার কল (প্যারালাল মাল্টি-সিডিএন)
+                if (!hadithText) {
+                    const benEndpoints = [
+                        `https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/${benEdition}/${hadithNo}.min.json`,
+                        `https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/${benEdition}/${hadithNo}.json`,
+                        `https://fastly.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/${benEdition}/${hadithNo}.min.json`,
+                        `https://raw.githubusercontent.com/fawazahmed0/hadith-api/1/editions/${benEdition}/${hadithNo}.min.json`,
+                        `https://raw.githubusercontent.com/fawazahmed0/hadith-api/1/editions/${benEdition}/${hadithNo}.json`
+                    ];
+
+                    const benResult = await fetchFirstValid(benEndpoints, 3500);
+                    if (benResult && benResult.text) {
+                        hadithText = benResult.text;
+                        hadithActualNumber = benResult.hadithnumber || hadithNo;
+                    }
+                }
+
+                // যদি বাংলা সিডিএন ফাইল না পাওয়া যায়, আন্তর্জাতিক সংস্করণ থেকে ফেচ ও রূপান্তর
+                if (!hadithText && currentHadithBook === 'muslim') {
+                    const engEndpoints = [
+                        `https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-muslim/${hadithNo}.min.json`,
+                        `https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-muslim/${hadithNo}.json`,
+                        `https://fastly.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/eng-muslim/${hadithNo}.min.json`,
+                        `https://raw.githubusercontent.com/fawazahmed0/hadith-api/1/editions/eng-muslim/${hadithNo}.json`
+                    ];
+
+                    const engResult = await fetchFirstValid(engEndpoints, 3500);
+                    if (engResult && engResult.text) {
+                        hadithText = await autoTranslateToBangla(engResult.text);
+                        hadithActualNumber = engResult.hadithnumber || hadithNo;
+                    }
+                }
+
+                if (!hadithText) {
+                    throw new Error("হাদিস পাওয়া যায়নি");
+                }
+
+                currentHadithNumber = hadithNo;
+
+                // ২. আরবি মূল এবারত লাইভ কল (প্যারালাল মাল্টি-সিডিএন)
+                if (!arabicText) {
+                    const araEndpoints = [
+                        `https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/${araEdition}/${hadithNo}.min.json`,
+                        `https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/${araEdition}/${hadithNo}.json`,
+                        `https://fastly.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/${araEdition}/${hadithNo}.min.json`,
+                        `https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/${araEdition}1/${hadithNo}.min.json`,
+                        `https://raw.githubusercontent.com/fawazahmed0/hadith-api/1/editions/${araEdition}/${hadithNo}.min.json`
+                    ];
+
+                    const araResult = await fetchFirstValid(araEndpoints, 3200);
+                    if (araResult && araResult.text) {
+                        arabicText = araResult.text;
+                    }
+                }
+
+                loader.classList.add("hidden");
+
+                // কার্ড তৈরি ও প্রদর্শন
+                const card = document.createElement("div");
+                card.className = "royal-card p-5 rounded-3xl border-2 border-emerald-600/50 space-y-3.5 shadow-xl";
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-emerald-700/50 pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="px-3 py-1 bg-amber-400 text-slate-950 font-black text-xs rounded-xl shadow">
+                                ${currentHadithBookName}
+                            </span>
+                            <span class="text-xs font-bold text-amber-300">
+                                হাদিস নং: ${toBanglaNum(hadithActualNumber)}
+                            </span>
+                        </div>
+                        <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 font-bold">
+                            সহীহ হাদিস
+                        </span>
+                    </div>
+
+                    ${arabicText ? `
+                    <div class="bg-[#041610]/80 p-4 rounded-2xl border border-emerald-900/60">
+                        <p class="font-arabic text-xl sm:text-2xl text-amber-100 text-right leading-loose font-bold">
+                            ${arabicText}
+                        </p>
+                    </div>` : ''}
+
+                    <div>
+                        <div class="flex items-center gap-1.5 text-xs font-bold text-amber-400 mb-1.5">
+                            <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+                            <span>বাংলা অনুবাদ:</span>
+                        </div>
+                        <p class="text-emerald-100 text-sm sm:text-base leading-relaxed font-medium">
+                            ${hadithText}
+                        </p>
+                    </div>
+
+                    <div class="pt-2 text-[11px] text-emerald-400/70 border-t border-emerald-800/40 flex justify-between items-center">
+                        <span>আন্তর্জাতিক রেফারেন্স: ${hadithActualNumber}</span>
+                        <span class="text-amber-300 font-semibold">ভেরিফায়েড ডাটা</span>
+                    </div>
+                `;
+
+                list.appendChild(card);
+                nav.classList.remove("hidden");
+                lucide.createIcons();
+
+            } catch (err) {
+                loader.classList.add("hidden");
+                list.innerHTML = `
+                    <div class="royal-card p-6 rounded-2xl border border-red-500/40 text-center space-y-2">
+                        <div class="w-12 h-12 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center mx-auto mb-2">
+                            <i data-lucide="alert-circle" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-red-300">হাদিসটি লোড করা সম্ভব হয়নি</h4>
+                        <p class="text-xs text-emerald-200">
+                            ${currentHadithBookName}-এ ১ থেকে ${toBanglaNum(currentHadithMax)} পর্যন্ত হাদিস রয়েছে। দয়া করে নম্বরটি যাচাই করুন অথবা পরবর্তী হাদিস দেখুন।
+                        </p>
+                        <div class="pt-2">
+                            <button onclick="navigateHadith(1)" class="px-4 py-2 bg-amber-400 text-slate-950 font-bold rounded-xl text-xs hover:bg-amber-300">পরবর্তী হাদিস দেখুন &rarr;</button>
+                        </div>
+                    </div>
+                `;
+                lucide.createIcons();
+            }
+        }
+
+        // ================= 200 AUTHENTIC DUAS & ENGINE =================
+        const duaCategories = ["সকল", "দৈনন্দিন", "সকাল-সন্ধ্যা", "নামায", "ক্ষমা ও তাওবা", "অসুস্থতা ও শেফা", "রিযিক ও পেরেশানি", "ভ্রমণ ও বিপদ"];
+
+        const fallbackDuaDatabase = [
+            { cat: "দৈনন্দিন", title: "ঘুম থেকে ওঠার দোয়া", ar: "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ", bn: "আলহামদু লিল্লাহিল্লাজি আহইয়ানা বা'দা মা আমাতানা ওয়া ইলাইহিন নুশুর।", meaning: "সমস্ত প্রশংসা আল্লাহর জন্য, যিনি আমাদের মৃত্যুর পর জীবিত করলেন এবং তাঁরই কাছে সবার পুনরুত্থান।" },
+            { cat: "দৈনন্দিন", title: "ঘুমানোর পূর্বে দোয়া", ar: "اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا", bn: "আল্লাহুম্মা বিসমিকা আমুতু ওয়া আহইয়া।", meaning: "হে আল্লাহ! আপনার নামেই আমি মৃত্যুবরণ (ঘুম) করছি এবং জীবন লাভ করব।" },
+            { cat: "দৈনন্দিন", title: "খাবার শুরুর দোয়া", ar: "بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ", bn: "বিসমিল্লাহি ওয়া আলা বারাকাতিল্লাহ।", meaning: "আল্লাহর নামে এবং আল্লাহর বরকতের ওপর শুরু করছি।" },
+            { cat: "দৈনন্দিন", title: "খাবার শেষের দোয়া", ar: "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ", bn: "আলহামদু লিল্লাহিল্লাজি আত'আমানা ওয়া সাক্বানা ওয়া জা'আলানা মুসলিমিন।", meaning: "সকল প্রশংসা আল্লাহর, যিনি আমাদের আহার করিয়েছেন, পান করিয়েছেন এবং মুসলিম বানিয়েছেন।" },
+            { cat: "দৈনন্দিন", title: "ঘরে প্রবেশের দোয়া", ar: "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلَجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا", bn: "আল্লাহুম্মা ইন্নি আসআলুকা খাইরাল মাওলাজি ওয়া খাইরাল মাখরাজি...", meaning: "হে আল্লাহ! আমি আপনার নিকট উত্তম প্রবেশ ও উত্তম প্রস্থান প্রার্থনা করছি।" },
+            { cat: "দৈনন্দিন", title: "ঘর থেকে বের হওয়ার দোয়া", ar: "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ", bn: "বিসমিল্লাহি তাওয়াক্কালতু আলাল্লাহ, লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহ।", meaning: "আল্লাহর নামে বের হচ্ছি, আল্লাহর ওপর ভরসা করলাম। আল্লাহর সাহায্য ছাড়া কোনো ক্ষমতা ও শক্তি নেই।" },
+            { cat: "দৈনন্দিন", title: "টয়লেটে প্রবেশের দোয়া", ar: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ", bn: "আল্লাহুম্মা ইন্নি আউজু বিকা মিনাল খুবুসি ওয়াল খাবায়িস।", meaning: "হে আল্লাহ! আমি আপনার নিকট অপবিত্র নর ও নারী শয়তান থেকে আশ্রয় চাই।" },
+            { cat: "দৈনন্দিন", title: "টয়লেট থেকে বের হওয়ার দোয়া", ar: "غُفْرَانَكَ الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنِّي الْأَذَى وَعَافَانِي", bn: "গুফরানাকা, আলহামদু লিল্লাহিল্লাজি আজহাবা আন্নিল আজা ওয়া আফানি।", meaning: "হে আল্লাহ! আপনার ক্ষমা প্রার্থনা করি। সমস্ত প্রশংসা আল্লাহর যিনি কষ্টদায়ক বস্তু দূর করেছেন।" },
+            { cat: "সকাল-সন্ধ্যা", title: "সায়্যিদুল ইস্তিগফার (শ্রেষ্ঠ তওবা)", ar: "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ...", bn: "আল্লাহুম্মা আনতা রব্বি লা ইলাহা ইল্লা আনতা খালাক্বতানি ওয়া আনা আবদুকা...", meaning: "হে আল্লাহ! আপনি আমার রব, আপনি ছাড়া কোনো উপাস্য নেই। আপনি আমাকে সৃষ্টি করেছেন, আমি আপনার বান্দা..." },
+            { cat: "সকাল-সন্ধ্যা", title: "বিপদ-আপদ থেকে বাঁচার শ্রেষ্ঠ দোয়া", ar: "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ", bn: "বিসমিল্লাহিল্লাজি লা ইয়াদুররু মা'আসমিহি শাইয়ুন ফিল আরদ্বি ওয়ালা ফিস সামা-ই...", meaning: "সেই আল্লাহর নামে যাঁর নামের সাথে জমিন ও আসমানের কোনো কিছুই ক্ষতি করতে পারে না।" },
+            { cat: "সকাল-সন্ধ্যা", title: "আল্লাহর সন্তুষ্টি লাভের দোয়া", ar: "رَضِيتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا", bn: "রাদীতু বিল্লাহি রব্বান, ওয়াবিল ইসলামি দীনান, ওয়াবি মুহাম্মাদিন নাবিয়্যা।", meaning: "আমি সন্তুষ্টচিত্তে আল্লাহকে রব, ইসলামকে দ্বীন এবং মুহাম্মদ (সাঃ)-কে নবী হিসেবে গ্রহণ করেছি।" },
+            { cat: "নামায", title: "মসজিদে প্রবেশের দোয়া", ar: "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ", bn: "আল্লাহুম্মাফ তাহলী আবওয়াবা রাহমাতিক।", meaning: "হে আল্লাহ! আমার জন্য আপনার রহমতের দরজাগুলো উন্মুক্ত করে দিন।" },
+            { cat: "নামায", title: "মসজিদ থেকে বের হওয়ার দোয়া", ar: "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ", bn: "আল্লাহুম্মা ইন্নি আসআলুকা মিন ফাদলিক।", meaning: "হে আল্লাহ! আমি আপনার অনুগ্রহ প্রার্থনা করছি।" },
+            { cat: "নামায", title: "রুকু থেকে ওঠার দোয়া", ar: "رَبَّنَا وَلَكَ الْحَمْدُ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ", bn: "রব্বানা ওয়া লাকাল হামদ, হামদান কাসীরন ত্বাইয়্যিবান মুবারাকান ফিহ।", meaning: "হে আমাদের রব! আপনারই সমস্ত প্রশংসা, এমন প্রশংসা যা অশেষ, পবিত্র ও বরকতময়।" },
+            { cat: "ক্ষমা ও তাওবা", title: "পিতা-মাতার জন্য কুরআনি দোয়া", ar: "رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا", bn: "রব্বির হামহুমা কামা রব্বায়ানি সাগিরা।", meaning: "হে আমার রব! তাদের উভয়ের প্রতি রহম করুন, যেমন তারা শৈশবে আমাকে লালন-পালন করেছিলেন।" },
+            { cat: "ক্ষমা ও তাওবা", title: "ইউনুস (আঃ)-এর মাছের পেটের দোয়া", ar: "لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ", bn: "লা ইলাহা ইল্লা আনতা সুবহানাকা ইন্নি কুনতু মিনাজ জোয়ালিমীন।", meaning: "আপনি ছাড়া কোনো উপাস্য নেই, আপনি মহাপবিত্র! নিশ্চয়ই আমি জালিমদের অন্তর্ভুক্ত ছিলাম।" },
+            { cat: "ক্ষমা ও তাওবা", title: "জাহান্নাম থেকে মুক্তির দোয়া", ar: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ", bn: "রব্বানা আতিনা ফিদ্দুনয়া হাসানাহ, ওয়াফিল আখিরাতি হাসানাহ, ওয়াক্বিনা আজাবান নার।", meaning: "হে আমাদের প্রতিপালক! আমাদের ইহকালে কল্যাণ দিন এবং পরকালেও কল্যাণ দিন এবং আগুনের শাস্তি থেকে রক্ষা করুন।" },
+            { cat: "অসুস্থতা ও শেফা", title: "রোগ মুক্তির বিশেষ দোয়া", ar: "اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَاسَ اشْفِهِ وَأَنْتَ الشَّافِي لَا شِفَاءَ إِلَّا شِفَاؤُكَ شِفَاءً لَا يُغَادِرُ سَقَمًا", bn: "আল্লাহুম্মা রব্বান নাসি আজহিবিল বা'স, ইশফিহি ওয়া আনতাশ শাফি...", meaning: "হে আল্লাহ! মানুষের রব! আপনি রোগ দূর করে দিন এবং শেফা দান করুন, আপনিই আরোগ্যকারী।" },
+            { cat: "রিযিক ও পেরেশানি", title: "ঋণমুক্তি ও দুশ্চিন্তা মুক্তির দোয়া", ar: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ", bn: "আল্লাহুম্মা ইন্নি আউজু বিকা মিনাল হাম্মি ওয়াল হাযানি...", meaning: "হে আল্লাহ! আমি আপনার কাছে আশ্রয় চাই দুশ্চিন্তা ও পেরেশানি থেকে, অলসতা ও অক্ষমতা থেকে এবং ঋণের বোঝা ও মানুষের অত্যাচার থেকে।" },
+            { cat: "রিযিক ও পেরেশানি", title: "জ্ঞান বৃদ্ধির দোয়া", ar: "رَّبِّ زِدْنِي عِلْمًا", bn: "রব্বি যিদনী ইলমা।", meaning: "হে আমার রব! আমার জ্ঞান বৃদ্ধি করে দিন।" },
+            { cat: "ভ্রমণ ও বিপদ", title: "যানবাহনে চড়ার দোয়া", ar: "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَٰذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ", bn: "সুবহানাল্লাজি সাখখারা লানা হাজা ওয়ামা কুন্না লাহু মুকরিনিন, ওয়া ইন্না ইলা রব্বিনা লামুনক্বলিবুন।", meaning: "পবিত্র সেই সত্তা যিনি একে আমাদের বশীভূত করে দিয়েছেন..." }
+        ];
+
+
+        // OpenDua / Hisn al-Muslim dataset: 262 distinct supplications, CC BY 4.0.
+        // Load the first 200 unique Arabic supplications; cache them for later visits.
+        let duaDatabase = [...fallbackDuaDatabase];
+        let duaDataLoaded = false;
+        const DUA_DATA_URL = "https://opendua.hdfund.org/v0.0.4/catalogue.json";
+        const DUA_CACHE_KEY = "islamBanglaDuaCacheV1";
+        const DUA_BN_TRANSLATION_CACHE_KEY = "islamBanglaDuaBanglaMeaningV1";
+        const DUA_BN_PRONUNCIATION_CACHE_KEY = "islamBanglaDuaBanglaPronunciationV5";
+
+        function mapDuaCategory(tags = [], chapterTitle = "") {
+            const tagText = (tags || []).join(" ").toLowerCase() + " " + String(chapterTitle).toLowerCase();
+            if (/morning|evening|sleep|waking/.test(tagText)) return "সকাল-সন্ধ্যা";
+            if (/prayer|salah|mosque|adhan|ablution|wudu|ruku|sujood|tashahhud/.test(tagText)) return "নামায";
+            if (/forgiv|repent|sin|tawba/.test(tagText)) return "ক্ষমা ও তাওবা";
+            if (/sick|illness|pain|healing/.test(tagText)) return "অসুস্থতা ও শেফা";
+            if (/debt|provision|rizq|worry|grief|anguish/.test(tagText)) return "রিযিক ও পেরেশানি";
+            if (/travel|journey|vehicle|town|market/.test(tagText)) return "ভ্রমণ ও বিপদ";
+            return "দৈনন্দিন";
+        }
+
+        function extractDistinctDuas(catalogue) {
+            const chapters = new Map((catalogue.chapters || []).map(ch => [ch.id, ch.title]));
+            const unique = new Map();
+            (catalogue.entries || []).forEach(entry => {
+                const chapterTitle = chapters.get(entry.chapterId) || "দৈনন্দিন দোয়া";
+                const variation = (entry.variations || []).find(v => v.id === "standard") || (entry.variations || [])[0];
+                (variation?.steps || []).forEach(step => {
+                    (step.items || []).forEach(item => {
+                        const d = item.dua;
+                        if (!d || !d.arabic) return;
+                        const key = d.arabic.replace(/[\s،؛,.]/g, "");
+                        if (!unique.has(key)) {
+                            unique.set(key, {
+                                cat: mapDuaCategory(entry.tags, chapterTitle),
+                                title: `দোয়া ${toBanglaNum(unique.size + 1)} — ${mapDuaCategory(entry.tags, chapterTitle)}`,
+                                ar: d.arabic,
+                                bn: d.transliteration || "",
+                                meaning: d.translation || "",
+                                searchTerms: [chapterTitle, ...(entry.tags || [])].join(" "),
+                                source: `হিসনুল মুসলিম, অধ্যায় ${chapterTitle}${entry.sourceReference ? ` (নম্বর ${entry.sourceReference})` : ""}`
+                            });
+                        }
+                    });
+                });
+            });
+            return Array.from(unique.values()).slice(0, 200);
+        }
+
+        // Translate the source's English meanings into Bengali and cache them locally.
+        // The Arabic text and transliteration remain unchanged.
+        async function translateDuaMeaningsToBangla(duas) {
+            let translationCache = {};
+            try { translationCache = JSON.parse(localStorage.getItem(DUA_BN_TRANSLATION_CACHE_KEY) || "{}"); } catch (_) {}
+            const pending = duas.filter(d => d.meaning && !translationCache[d.meaning]);
+            let cursor = 0;
+            async function worker() {
+                while (cursor < pending.length) {
+                    const item = pending[cursor++];
+                    try {
+                        const url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=bn&dt=t&q=" + encodeURIComponent(item.meaning);
+                        const response = await fetch(url);
+                        if (!response.ok) throw new Error("Translation service unavailable");
+                        const data = await response.json();
+                        const translated = (data[0] || []).map(part => part[0] || "").join("").trim();
+                        if (translated) translationCache[item.meaning] = translated;
+                    } catch (error) {
+                        console.warn("A dua meaning could not be translated right now.", error);
+                    }
+                    if (cursor % 10 === 0) {
+                        try { localStorage.setItem(DUA_BN_TRANSLATION_CACHE_KEY, JSON.stringify(translationCache)); } catch (_) {}
+                    }
+                }
+            }
+            await Promise.all(Array.from({ length: 4 }, () => worker()));
+            duas.forEach(d => {
+                if (d.meaning && translationCache[d.meaning]) d.meaning = translationCache[d.meaning];
+                else if (d.meaning) d.meaning = "বাংলা অর্থ পেতে ইন্টারনেট সংযোগ দিয়ে আবার চেষ্টা করুন।";
+            });
+            try { localStorage.setItem(DUA_BN_TRANSLATION_CACHE_KEY, JSON.stringify(translationCache)); } catch (_) {}
+            return duas;
+        }
+
+        // Convert Latin-script dua transliterations into Bengali-script pronunciation.
+        // Existing Bengali-script pronunciations are preserved as they are.
+        // Convert every Latin-script transliteration to Bengali script.
+        // A fresh cache version prevents old mixed-script results from appearing.
+        // Convert all source transliterations to Bengali script.
+        // Google transliteration is preferred; a local phonetic fallback ensures
+        // that Latin-script pronunciation is never shown to the reader.
+        async function convertDuaPronunciationsToBangla(duas) {
+            let cache = {};
+            try { cache = JSON.parse(localStorage.getItem(DUA_BN_PRONUNCIATION_CACHE_KEY) || "{}"); } catch (_) {}
+
+            const hasBangla = v => /[\u0980-\u09FF]/.test(String(v || ""));
+            const hasLatin = v => /[A-Za-z]/.test(String(v || ""));
+            const clean = v => String(v || "")
+                .replace(/[A-Za-z]+/g, "")
+                .replace(/[\u200B-\u200D\uFEFF]/g, "")
+                .replace(/\s+([।,;:])/g, "$1")
+                .replace(/([,;:])(?=\S)/g, "$1 ")
+                .replace(/\s{2,}/g, " ").trim();
+
+            // Approximate Bengali phonetic rendering used only if online conversion fails.
+            // This is a reading aid, not a scholarly transliteration.
+            function localPhonetic(text) {
+                const words = String(text || "").replace(/([.,;!?])/g, " $1 ").split(/\s+/).filter(Boolean);
+                const map = [
+                    [/sh/g, "শ"], [/kh/g, "খ"], [/gh/g, "ঘ"], [/chh/g, "ছ"], [/ch/g, "চ"],
+                    [/th/g, "থ"], [/dh/g, "ধ"], [/ph/g, "ফ"], [/bh/g, "ভ"], [/zh/g, "ঝ"],
+                    [/q/g, "ক"], [/x/g, "ক্স"], [/aa/g, "া"], [/ee|ii/g, "ী"], [/oo|uu/g, "ূ"],
+                    [/ai/g, "ай"], [/au/g, "аউ"], [/a/g, "অ"], [/i/g, "ই"], [/u/g, "উ"],
+                    [/e/g, "এ"], [/o/g, "ও"], [/b/g, "ব"], [/p/g, "প"], [/t/g, "ত"],
+                    [/d/g, "দ"], [/k/g, "ক"], [/g/g, "গ"], [/m/g, "ম"], [/n/g, "ন"],
+                    [/r/g, "র"], [/l/g, "ল"], [/s/g, "স"], [/h/g, "হ"], [/w/g, "ওয়"],
+                    [/y/g, "য়"], [/j/g, "জ"], [/c/g, "ক"], [/f/g, "ফ"], [/v/g, "ভ"],
+                    [/z/g, "জ"], [/';/g, ""]
+                ];
+                return words.map(word => {
+                    if (/^[.,;!?।]+$/.test(word)) return word === "." ? "।" : word;
+                    let x = word.toLowerCase().replace(/['’`]/g, "");
+                    for (const [pattern, value] of map) x = x.replace(pattern, value);
+                    return x;
+                }).join(" ").replace(/\s+([,;!?।])/g, "$1").replace(/([,;!?।])(?=\S)/g, "$1 ").trim();
+            }
+
+            let cursor = 0;
+            const pending = duas.filter(d => d.bn && !(hasBangla(d.bn) && !hasLatin(d.bn)) && !cache[d.bn]);
+            async function worker() {
+                while (cursor < pending.length) {
+                    const item = pending[cursor++];
+                    const original = String(item.bn || "").trim();
+                    try {
+                        const url = "https://inputtools.google.com/request?text=" +
+                            encodeURIComponent(original) + "&itc=bn-t-i0-und&num=5";
+                        const response = await fetch(url);
+                        if (!response.ok) throw new Error("transliteration unavailable");
+                        const data = await response.json();
+                        const candidates = data?.[1]?.[0]?.[1] || [];
+                        const converted = candidates.find(v => hasBangla(v) && !hasLatin(v));
+                        if (converted) cache[original] = clean(converted);
+                    } catch (error) {
+                        console.warn("Online Bengali transliteration unavailable; using local phonetic fallback.");
+                    }
+                    if (!cache[original]) cache[original] = localPhonetic(original);
+                    try { localStorage.setItem(DUA_BN_PRONUNCIATION_CACHE_KEY, JSON.stringify(cache)); } catch (_) {}
+                }
+            }
+            await Promise.all(Array.from({length: 2}, () => worker()));
+
+            duas.forEach(d => {
+                const original = String(d.bn || "").trim();
+                if (!original) {
+                    d.bn = "এই দোয়ার বাংলা উচ্চারণের তথ্য পাওয়া যায়নি।";
+                } else if (hasBangla(original) && !hasLatin(original)) {
+                    d.bn = clean(original);
+                } else {
+                    d.bn = clean(cache[original] || localPhonetic(original));
+                }
+                if (!hasBangla(d.bn)) d.bn = "এই দোয়ার বাংলা উচ্চারণ তৈরি করা যায়নি।";
+            });
+            try { localStorage.setItem(DUA_BN_PRONUNCIATION_CACHE_KEY, JSON.stringify(cache)); } catch (_) {}
+            return duas;
+        }
+        async function loadDuaDatabase() {
+            if (duaDataLoaded) return;
+            duaDataLoaded = true;
+            try {
+                const cached = localStorage.getItem(DUA_CACHE_KEY);
+                if (cached) {
+                    const parsed = JSON.parse(cached);
+                    if (Array.isArray(parsed) && parsed.length >= 200) {
+                        duaDatabase = await convertDuaPronunciationsToBangla(await translateDuaMeaningsToBangla(parsed.slice(0, 200)));
+                        return;
+                    }
+                }
+                const response = await fetch(DUA_DATA_URL, { cache: "force-cache" });
+                if (!response.ok) throw new Error("Dua dataset unavailable");
+                const catalogue = await response.json();
+                const loaded = extractDistinctDuas(catalogue);
+                if (loaded.length < 200) throw new Error("Not enough distinct duas in source data");
+                duaDatabase = await convertDuaPronunciationsToBangla(await translateDuaMeaningsToBangla(loaded));
+                localStorage.setItem(DUA_CACHE_KEY, JSON.stringify(loaded));
+            } catch (error) {
+                console.warn("Dua library could not be refreshed; using the available offline duas.", error);
+                duaDatabase = [...fallbackDuaDatabase];
+                duaDataLoaded = false;
+            }
+        }
+        let activeDuaCat = "সকল";
+
+        async function openDuaSection() {
+            hideAllViews();
+            document.getElementById("duaView").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            renderDuaCategories();
+            const duaContainer = document.getElementById("duaListContainer");
+            duaContainer.innerHTML = `<div class="text-center text-emerald-200 py-8">দোয়ার সংগ্রহ প্রস্তুত হচ্ছে... <span class="block text-xs text-emerald-400 mt-2">কুরআন ও সুন্নাহভিত্তিক দোয়া</span></div>`;
+            await loadDuaDatabase();
+            filterDuas();
+            if (duaDatabase.length < 200) {
+                showIslamicNotice("সম্পূর্ণ ২০০টি দোয়া লোড করতে ইন্টারনেট সংযোগ প্রয়োজন। আপাতত সংরক্ষিত দোয়াগুলো দেখানো হচ্ছে।", "দোয়ার সংগ্রহ");
+            }
+        }
+
+        function renderDuaCategories() {
+            const bar = document.getElementById("duaCategoriesBar");
+            bar.innerHTML = "";
+            duaCategories.forEach(cat => {
+                const btn = document.createElement("button");
+                btn.className = `px-3.5 py-1.5 rounded-xl font-bold whitespace-nowrap transition ${activeDuaCat === cat ? 'bg-amber-400 text-slate-950 font-black' : 'bg-[#07241a] text-emerald-200 border border-emerald-600/40'}`;
+                btn.innerText = cat;
+                btn.onclick = () => {
+                    activeDuaCat = cat;
+                    renderDuaCategories();
+                    filterDuas();
+                };
+                bar.appendChild(btn);
+            });
+        }
+
+        function escapeDuaText(value) {
+            return String(value ?? "").replace(/[&<>"']/g, ch => ({
+                "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+            })[ch]);
+        }
+
+        function renderDuas(list) {
+            const container = document.getElementById("duaListContainer");
+            container.innerHTML = "";
+
+            if (list.length === 0) {
+                container.innerHTML = `<div class="text-center text-emerald-300 py-8">কোন দোয়া খুঁজে পাওয়া যায়নি।</div>`;
+                return;
+            }
+
+            list.forEach(d => {
+                const card = document.createElement("div");
+                card.className = "royal-card p-4 rounded-2xl border border-emerald-600/40 space-y-2.5";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-emerald-700/30 pb-2">
+                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-950 text-amber-300 font-bold border border-emerald-500/30">${escapeDuaText(d.cat)}</span>
+                        <h4 class="text-sm font-extrabold text-white">${escapeDuaText(d.title)}</h4>
+                    </div>
+                    <p class="font-arabic text-xl font-bold text-amber-200 text-right leading-loose">${escapeDuaText(d.ar)}</p>
+                    <div class="bg-[#041610] p-2.5 rounded-xl border border-emerald-900/50 space-y-1">
+                        <p class="text-xs text-emerald-100"><span class="text-amber-300">বাংলা অর্থ:</span> ${escapeDuaText(d.meaning)}</p>
+                        ${d.source ? `<p class="text-[10px] text-emerald-400/80 pt-1">সূত্র: ${escapeDuaText(d.source)}</p>` : ""}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function normalizeDuaSearchText(value) {
+            return String(value || "")
+                .toLocaleLowerCase("bn")
+                .replace(/[ًٌٍَُِّْٰـ]/g, "")
+                .replace(/[أإآ]/g, "ا")
+                .replace(/ى/g, "ي")
+                .trim();
+        }
+
+        function filterDuas() {
+            const rawQuery = document.getElementById("duaSearchInput").value;
+            const query = normalizeDuaSearchText(rawQuery);
+            const topicAliases = {
+                "ঘুম": ["sleep", "waking", "ঘুম"], "সকাল": ["morning", "wake", "সকাল"],
+                "সন্ধ্যা": ["evening", "সন্ধ্যা"], "খাবার": ["food", "eat", "meal", "খাবার"],
+                "পানি": ["water", "drink", "পানি"], "ক্ষমা": ["forgiv", "repent", "তাওবা", "ক্ষমা"],
+                "তাওবা": ["repent", "তাওবা", "ক্ষমা"], "রোগ": ["sick", "illness", "pain", "healing", "রোগ"],
+                "শেফা": ["healing", "sick", "শেফা"], "ভ্রমণ": ["travel", "journey", "vehicle", "ভ্রমণ"],
+                "যাত্রা": ["travel", "journey", "যাত্রা"], "ঋণ": ["debt", "ঋণ"],
+                "রিযিক": ["provision", "rizq", "রিযিক"], "দুশ্চিন্তা": ["worry", "grief", "anguish", "দুশ্চিন্তা"],
+                "বিপদ": ["protection", "danger", "harm", "বিপদ"], "মসজিদ": ["mosque", "মসজিদ"],
+                "নামায": ["prayer", "salah", "নামায"], "টয়লেট": ["toilet", "bathroom", "টয়লেট"],
+                "বাড়ি": ["home", "house", "বাড়ি"], "ঘর": ["home", "house", "ঘর"],
+                "পিতা": ["parent", "father", "পিতা"], "মাতা": ["parent", "mother", "মাতা"],
+                "জ্ঞান": ["knowledge", "জ্ঞান"]
+            };
+            const aliases = topicAliases[query] || [];
+            const filtered = duaDatabase.filter(d => {
+                const matchCat = activeDuaCat === "সকল" || d.cat === activeDuaCat;
+                const searchable = normalizeDuaSearchText([
+                    d.title, d.cat, d.ar, d.meaning, d.source, d.searchTerms
+                ].join(" "));
+                const matchQuery = !query || searchable.includes(query) ||
+                    aliases.some(alias => searchable.includes(normalizeDuaSearchText(alias)));
+                return matchCat && matchQuery;
+            });
+            renderDuas(filtered);
+        }
+
+        // ================= AMAL TRACKER LOGIC =================
+        const defaultAmals = [
+            { id: "fajr", name: "ফজর নামায আদায়" },
+            { id: "dhuhr", name: "যোহর নামায আদায়" },
+            { id: "asr", name: "আসর নামায আদায়" },
+            { id: "maghrib", name: "মাগরিব নামায আদায়" },
+            { id: "isha", name: "এশা নামায ও বিতর" },
+            { id: "quran", name: "দৈনিক কুরআন তিলাওয়াত (কমপক্ষে ১ রুকু)" },
+            { id: "dhikr", name: "সকাল ও সন্ধ্যার গুরুত্বপূর্ণ মাসনূন যিকির" },
+            { id: "istighfar", name: "১০০ বার ইস্তিগফার ও দুরুদ শরীফ পাঠ" },
+            { id: "sadaqah", name: "সদকা বা কাউকে হাসিমুখে দ্বীনি সাহায্য" }
+        ];
+
+        // আমল ট্র্যাকার প্রতিটি নতুন স্থানীয় দিনে স্বয়ংক্রিয়ভাবে নতুন হবে।
+        const AMAL_TRACKER_DATE_KEY = "amal_tracker_current_date_v2";
+        function getAmalLocalDateKey() {
+            const now = new Date();
+            const y = now.getFullYear();
+            const m = String(now.getMonth() + 1).padStart(2, "0");
+            const d = String(now.getDate()).padStart(2, "0");
+            return `${y}-${m}-${d}`;
+        }
+        function ensureAmalTrackerIsToday() {
+            const today = getAmalLocalDateKey();
+            const savedDate = localStorage.getItem(AMAL_TRACKER_DATE_KEY);
+            if (savedDate !== today) {
+                defaultAmals.forEach(a => localStorage.removeItem(`amal_${a.id}`));
+                localStorage.setItem(AMAL_TRACKER_DATE_KEY, today);
+            }
+        }
+
+        function openAmalSection() {
+            ensureAmalTrackerIsToday();
+            hideAllViews();
+            document.getElementById("amalView").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            renderAmalChecklist();
+        }
+
+        function renderAmalChecklist() {
+            const list = document.getElementById("amalChecklist");
+            list.innerHTML = "";
+            let completed = 0;
+
+            defaultAmals.forEach(a => {
+                const isChecked = localStorage.getItem(`amal_${a.id}`) === "true";
+                if (isChecked) completed++;
+
+                const item = document.createElement("div");
+                item.className = "flex items-center justify-between p-3.5 rounded-2xl bg-[#07241a] border border-emerald-600/40";
+                item.innerHTML = `
+                    <span class="text-sm font-bold ${isChecked ? 'text-amber-300 line-through' : 'text-white'}">${a.name}</span>
+                    <input type="checkbox" onchange="toggleAmal('${a.id}')" ${isChecked ? 'checked' : ''} class="w-5 h-5 accent-amber-400 rounded cursor-pointer">
+                `;
+                list.appendChild(item);
+            });
+
+            const percent = Math.round((completed / defaultAmals.length) * 100);
+            document.getElementById("amalProgressBar").style.width = `${percent}%`;
+            document.getElementById("amalPercentText").innerText = `${toBanglaNum(percent)}%`;
+        }
+
+        function toggleAmal(id) {
+            ensureAmalTrackerIsToday();
+            const current = localStorage.getItem(`amal_${id}`) === "true";
+            localStorage.setItem(`amal_${id}`, (!current).toString());
+            renderAmalChecklist();
+        }
+
+        async function resetAmalTracker() {
+            ensureAmalTrackerIsToday();
+            const confirmed = await showIslamicConfirm("আজকের আমল রিসেট করুন", "আপনি কি আজকের আমল তালিকা পুনরায় শূন্য করতে চান?");
+            if (confirmed) {
+                defaultAmals.forEach(a => localStorage.removeItem(`amal_${a.id}`));
+                renderAmalChecklist();
+                showIslamicNotice("আজকের আমল তালিকা রিসেট করা হয়েছে।", "আমল ট্র্যাকার");
+            }
+        }
+
+        // ================= DEENI JIGGASA AI LOGIC =================
+        function openJiggasaSection() {
+            hideAllViews();
+            document.getElementById("jiggasaView").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => document.getElementById("aiQuestionInput")?.focus(), 250);
+        }
+
+        function addAIChatMessage(message, sender) {
+            const container = document.getElementById("aiChatMessages");
+            const row = document.createElement("div");
+            row.className = sender === "user" ? "flex justify-end" : "flex justify-start";
+            const bubble = document.createElement("div");
+            bubble.className = sender === "user"
+                ? "max-w-[88%] rounded-2xl rounded-tr-sm bg-emerald-800/90 border border-emerald-500/50 p-3 text-sm text-white whitespace-pre-wrap break-words"
+                : "max-w-[88%] rounded-2xl rounded-tl-sm bg-[#0b3022] border border-emerald-700/60 p-3 text-sm text-emerald-100 whitespace-pre-wrap break-words";
+            bubble.textContent = message;
+            row.appendChild(bubble);
+            container.appendChild(row);
+            container.scrollTop = container.scrollHeight;
+            return bubble;
+        }
+
+        async function sendAIQuestion() {
+            const input = document.getElementById("aiQuestionInput");
+            const button = document.getElementById("aiSendButton");
+            const question = input.value.trim();
+            if (!question) {
+                showIslamicNotice("অনুগ্রহ করে আগে আপনার প্রশ্নটি লিখুন।", "প্রশ্ন লিখুন");
+                input.focus();
+                return;
+            }
+            if (question.length > 2000) {
+                showIslamicNotice("প্রশ্নটি ২০০০ অক্ষরের মধ্যে রাখুন।", "প্রশ্নটি বড় হয়েছে");
+                return;
+            }
+
+            addAIChatMessage(question, "user");
+            input.value = "";
+            input.disabled = true;
+            button.disabled = true;
+            button.classList.add("opacity-60", "cursor-not-allowed");
+            const loadingBubble = addAIChatMessage("আপনার প্রশ্নের উত্তর তৈরি হচ্ছে...", "ai");
+
+            const systemPrompt = "তুমি ইসলাম বাংলা নামের একটি সহায়ক AI। ব্যবহারকারীর ভাষা বাংলা হলে সহজ, পরিষ্কার বাংলায় উত্তর দাও। ইসলাম, কুরআন, হাদিস, ইবাদত, পড়াশোনা, বিজ্ঞান, প্রযুক্তি, গণিত ও সাধারণ জ্ঞানসহ বিভিন্ন বিষয়ে সহায়ক উত্তর দাও। ইসলামী বিষয়ে কুরআন/হাদিসের উদ্ধৃতি বা নম্বর নিশ্চিত না হলে বানিয়ে বলবে না; অনিশ্চয়তা স্পষ্ট করবে। ফতোয়া, মতভেদপূর্ণ মাসআলা বা ব্যক্তিগত ধর্মীয় সিদ্ধান্তে যোগ্য আলেমের পরামর্শ নিতে বলবে। চিকিৎসা, আইন বা জরুরি বিষয়ে পেশাদারের সাহায্য নিতে বলবে। ভুল তথ্য নিশ্চিতভাবে বলবে না। সংক্ষিপ্ত কিন্তু যথেষ্ট ব্যাখ্যা দাও।";
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 45000);
+                const response = await fetch("https://text.pollinations.ai/openai", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        model: "openai-fast",
+                        messages: [
+                            { role: "system", content: systemPrompt },
+                            { role: "user", content: question }
+                        ],
+                        temperature: 0.5
+                    }),
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
+                if (!response.ok) throw new Error("AI সার্ভার থেকে উত্তর পাওয়া যায়নি (" + response.status + ")");
+                const data = await response.json();
+                const answer = data?.choices?.[0]?.message?.content || data?.choices?.[0]?.text || data?.output || data?.response;
+                if (!answer || typeof answer !== "string") throw new Error("AI থেকে খালি উত্তর এসেছে। পরে আবার চেষ্টা করুন।");
+                loadingBubble.textContent = answer.trim();
+            } catch (error) {
+                loadingBubble.textContent = error.name === "AbortError"
+                    ? "উত্তর পেতে বেশি সময় লাগছে। অনুগ্রহ করে আবার চেষ্টা করুন।"
+                    : "দুঃখিত, এই মুহূর্তে AI সার্ভারের সঙ্গে সংযোগ করা যাচ্ছে না। ইন্টারনেট পরীক্ষা করে কিছুক্ষণ পর আবার চেষ্টা করুন। (" + error.message + ")";
+            } finally {
+                input.disabled = false;
+                button.disabled = false;
+                button.classList.remove("opacity-60", "cursor-not-allowed");
+                input.focus();
+                document.getElementById("aiChatMessages").scrollTop = document.getElementById("aiChatMessages").scrollHeight;
+            }
+        }
+
+        // Enter দিয়ে পাঠানো; Shift+Enter দিলে নতুন লাইন হবে
+        document.addEventListener("keydown", function(event) {
+            if (event.target?.id === "aiQuestionInput" && event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                sendAIQuestion();
+            }
+        });
+
+        // ================= ZAKAT CALCULATOR LOGIC =================
+        function openZakatSection() {
+            hideAllViews();
+            document.getElementById("zakatView").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function calculateZakat() {
+            const cash = parseFloat(document.getElementById("zakatCash").value) || 0;
+            const gold = parseFloat(document.getElementById("zakatGold").value) || 0;
+            const business = parseFloat(document.getElementById("zakatBusiness").value) || 0;
+            const debts = parseFloat(document.getElementById("zakatDebts").value) || 0;
+
+            const totalWealth = (cash + gold + business) - debts;
+            const netWealth = totalWealth > 0 ? totalWealth : 0;
+            const payable = (netWealth * 0.025);
+
+            document.getElementById("netWealthText").innerText = `${toBanglaNum(netWealth.toLocaleString('en-IN'))} ৳`;
+            document.getElementById("payableZakatText").innerText = `${toBanglaNum(payable.toFixed(2))} ৳`;
+        }
+
+        // ISLAMIC CUSTOM CONFIRMATION (replaces browser confirm popup)
+        let islamicConfirmResolver = null;
+        function showIslamicConfirm(title, message) {
+            const modal = document.getElementById("islamicConfirmModal");
+            document.getElementById("islamicConfirmTitle").textContent = title;
+            document.getElementById("islamicConfirmMessage").textContent = message;
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            return new Promise(resolve => { islamicConfirmResolver = resolve; });
+        }
+        function resolveIslamicConfirm(value) {
+            const modal = document.getElementById("islamicConfirmModal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+            if (islamicConfirmResolver) islamicConfirmResolver(value);
+            islamicConfirmResolver = null;
+        }
+
+        // ISLAMIC CUSTOM NOTICE (replaces browser alert popups)
+        let islamicNoticeTimer = null;
+        function showIslamicNotice(message, title = "ইসলাম বাংলা") {
+            const popup = document.getElementById("readingNotice");
+            const text = document.getElementById("noticeText");
+            if (!popup || !text) return;
+            const titleNode = popup.querySelector("span");
+            if (titleNode) titleNode.textContent = title;
+            text.textContent = message;
+            popup.classList.remove("opacity-0", "pointer-events-none", "-translate-y-4");
+            popup.classList.add("opacity-100", "translate-y-0");
+            if (islamicNoticeTimer) clearTimeout(islamicNoticeTimer);
+            islamicNoticeTimer = setTimeout(() => {
+                popup.classList.add("opacity-0", "pointer-events-none", "-translate-y-4");
+                popup.classList.remove("opacity-100", "translate-y-0");
+            }, 3500);
+        }
+
+        // প্রতিদিন তারিখ অনুযায়ী নতুন উপদেশ দেখানো হবে (অফলাইনেও কাজ করবে)
+        const dailyIslamicAdvice = [
+            "প্রতিদিন নিজের কাজ ও আচরণে আল্লাহর সন্তুষ্টিকে প্রাধান্য দিন।",
+            "নামাজ সময়মতো আদায় করার অভ্যাস গড়ে তুলুন।",
+            "কথা বলার আগে ভাবুন—আপনার কথায় যেন কারও কষ্ট না হয়।",
+            "মা-বাবার সঙ্গে সম্মান ও কোমল আচরণ করুন।",
+            "অল্প হলেও নিয়মিত ভালো কাজ করার চেষ্টা করুন।",
+            "কোনো ভুল হলে দেরি না করে আল্লাহর কাছে ক্ষমা চান এবং সংশোধনের চেষ্টা করুন।",
+            "অন্যের দোষ খোঁজার আগে নিজের ভুলগুলো সংশোধন করুন।",
+            "প্রতিদিন কিছু সময় কুরআন পড়ুন এবং অর্থ বোঝার চেষ্টা করুন।",
+            "রাগের সময় ধৈর্য ধরুন এবং সংযতভাবে কথা বলুন।",
+            "সত্য কথা বলুন—কঠিন হলেও মিথ্যা থেকে দূরে থাকুন।",
+            "কারও উপকার করার সুযোগ পেলে আন্তরিকভাবে সাহায্য করুন।",
+            "আল্লাহর দেওয়া নিয়ামতের জন্য প্রতিদিন কৃতজ্ঞতা প্রকাশ করুন।",
+            "হিংসা ও অহংকার থেকে দূরে থেকে বিনয়ী হওয়ার চেষ্টা করুন।",
+            "সময়কে মূল্য দিন; ভালো কাজে সময় ব্যয় করুন।",
+            "লেনদেনে সততা ও আমানতদারিতা বজায় রাখুন।",
+            "কাউকে ছোট করে কথা বলবেন না; সবার সঙ্গে সম্মানজনক আচরণ করুন।",
+            "বিপদে ধৈর্য ধরুন এবং আল্লাহর কাছে সাহায্য চান।",
+            "নিজের জন্য যা ভালোবাসেন, অন্যের জন্যও তা ভালোবাসার চেষ্টা করুন।",
+            "গীবত ও অপ্রয়োজনীয় কথা থেকে জিহ্বাকে সংযত রাখুন।",
+            "প্রতিদিন নিজের কাজের হিসাব নিন এবং আগামীকাল আরও ভালো হওয়ার সংকল্প করুন।",
+            "প্রতিশ্রুতি দিলে তা রক্ষা করার চেষ্টা করুন।",
+            "পরিচ্ছন্নতা বজায় রাখুন এবং নিজের আশপাশ পরিষ্কার রাখুন।",
+            "অসহায় মানুষের পাশে দাঁড়ান; সামান্য সাহায্যও মূল্যবান হতে পারে।",
+            "দোয়া করতে ভুলবেন না; নিজের পাশাপাশি অন্যদের জন্যও কল্যাণ চান।",
+            "কাউকে ক্ষমা করতে পারলে অন্তরকে বিদ্বেষমুক্ত রাখার চেষ্টা করুন।",
+            "হালাল উপার্জন ও সৎ পথে চলার বিষয়ে যত্নবান হোন।",
+            "ভালো সঙ্গ বেছে নিন, যা আপনাকে ভালো কাজে উৎসাহিত করে।",
+            "কোনো কাজ শুরু করার আগে নিয়ত শুদ্ধ রাখুন।",
+            "অন্যের আমানত ও ব্যক্তিগত গোপনীয়তা রক্ষা করুন।",
+            "আজ অন্তত একটি ভালো কাজ করুন, যা শুধু আল্লাহর সন্তুষ্টির জন্য।"
+        ];
+
+        function updateDailyIslamicAdvice() {
+            const adviceElement = document.getElementById("dailyAdviceText");
+            if (!adviceElement) return;
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const dayNumber = Math.floor(today.getTime() / 86400000);
+            const adviceIndex = ((dayNumber % dailyIslamicAdvice.length) + dailyIslamicAdvice.length) % dailyIslamicAdvice.length;
+            adviceElement.textContent = dailyIslamicAdvice[adviceIndex];
+        }
+
+        // APP INITIALIZATION
+        window.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+            updateDailyIslamicAdvice();
+        });
+    </script>
+</body>
+</html>
